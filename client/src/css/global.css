@@ -1,0 +1,494 @@
+body {
+  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 2rem;
+  letter-spacing: 0.01rem;
+  color: #212121;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+header,
+footer {
+  background-color: #232a46;
+  color: white;
+}
+header a,
+footer a,
+header a:hover,
+footer a:hover {
+  color: white;
+}
+header {
+  padding: 5px;
+}
+header h1 {
+  margin: 0;
+  padding: 0;
+}
+footer .row {
+  text-align: center;
+  padding: 10px 0;
+}
+/* start 'enter' transition on main view */
+#app {
+  /* end 'enter' transition on main view */
+}
+#app label {
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 30px;
+  text-align: right;
+  padding-right: 5px;
+}
+#app fieldset legend {
+  margin-bottom: 0px;
+  padding-top: 0px;
+  font-size: 16px;
+}
+#app .form-group {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+#app .packingOptions .comboGroup {
+  display: block;
+  float: left;
+  padding: 5px;
+  width: 152px;
+}
+#app .packingOptions .comboGroup label {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  margin: 0;
+  line-height: 19px;
+}
+#app .packingOptions .btn {
+  margin: 5px;
+  line-height: 20px;
+}
+#app .btn {
+  padding: 4px 8px;
+  font-size: 13px;
+}
+#app .fake-combo {
+  border: solid 1px #eaebec;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#app .fake-combo[disabled],
+#app .fake-combo[disabled] > button {
+  background-color: #eee;
+  cursor: not-allowed;
+  color: black;
+}
+#app .fake-combo > button {
+  width: 100%;
+  overflow: hidden;
+  line-height: 20px;
+}
+#app .fake-combo span.textValue {
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  padding-right: 8px;
+}
+#app .fake-combo span.caret {
+  position: absolute;
+  right: 5px;
+  top: 12px;
+}
+#app .col-xs-1,
+#app .col-sm-1,
+#app .col-md-1,
+#app .col-lg-1,
+#app .col-xs-2,
+#app .col-sm-2,
+#app .col-md-2,
+#app .col-lg-2,
+#app .col-xs-3,
+#app .col-sm-3,
+#app .col-md-3,
+#app .col-lg-3,
+#app .col-xs-4,
+#app .col-sm-4,
+#app .col-md-4,
+#app .col-lg-4,
+#app .col-xs-5,
+#app .col-sm-5,
+#app .col-md-5,
+#app .col-lg-5,
+#app .col-xs-6,
+#app .col-sm-6,
+#app .col-md-6,
+#app .col-lg-6,
+#app .col-xs-7,
+#app .col-sm-7,
+#app .col-md-7,
+#app .col-lg-7,
+#app .col-xs-8,
+#app .col-sm-8,
+#app .col-md-8,
+#app .col-lg-8,
+#app .col-xs-9,
+#app .col-sm-9,
+#app .col-md-9,
+#app .col-lg-9,
+#app .col-xs-10,
+#app .col-sm-10,
+#app .col-md-10,
+#app .col-lg-10,
+#app .col-xs-11,
+#app .col-sm-11,
+#app .col-md-11,
+#app .col-lg-11,
+#app .col-xs-12,
+#app .col-sm-12,
+#app .col-md-12,
+#app .col-lg-12 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#app .form-control {
+  font-size: 13px;
+  line-height: 30px;
+  height: 30px;
+  padding: 2px;
+  border-radius: 0;
+}
+#app .border-right {
+  border-right: solid 1px #999;
+}
+#app table.table-compact {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+#app table.table-compact td,
+#app table.table-compact th {
+  padding: 2px 5px;
+  line-height: 20px;
+  font-size: 13px;
+  vertical-align: middle;
+}
+#app table.table-compact td input,
+#app table.table-compact th input,
+#app table.table-compact td select,
+#app table.table-compact th select,
+#app table.table-compact td textarea,
+#app table.table-compact th textarea {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  font-size: 13px;
+}
+#app table.table-compact td a.descr,
+#app table.table-compact th a.descr {
+  color: black;
+  display: block;
+  line-height: 15px;
+  height: 15px;
+}
+#app table.table-compact td a.descr:hover,
+#app table.table-compact th a.descr:hover {
+  text-decoration: none;
+}
+#app table.table-compact td a.img-check,
+#app table.table-compact th a.img-check {
+  display: block;
+  text-align: center;
+}
+#app table.table-compact td a.img-check img,
+#app table.table-compact th a.img-check img {
+  max-height: 20px;
+}
+#app table.table-compact td.check,
+#app table.table-compact th.check {
+  width: 25px;
+  text-align: center;
+}
+#app table.table-compact td.room,
+#app table.table-compact th.room {
+  width: 115px;
+}
+#app table.table-compact td.vol,
+#app table.table-compact th.vol,
+#app table.table-compact td.weight,
+#app table.table-compact th.weight {
+  width: 45px;
+  text-align: right;
+}
+#app table.table-compact td.amt,
+#app table.table-compact th.amt,
+#app table.table-compact td.w,
+#app table.table-compact th.w,
+#app table.table-compact td.h,
+#app table.table-compact th.h,
+#app table.table-compact td.l,
+#app table.table-compact th.l,
+#app table.table-compact td.dmf,
+#app table.table-compact th.dmf {
+  width: 37px;
+  text-align: right;
+}
+#app table.table-compact td.amt,
+#app table.table-compact th.amt {
+  width: 30px;
+}
+#app table.table-compact td.dis,
+#app table.table-compact th.dis,
+#app table.table-compact td.pw,
+#app table.table-compact th.pw,
+#app table.table-compact td.uw,
+#app table.table-compact th.uw,
+#app table.table-compact td.ass,
+#app table.table-compact th.ass,
+#app table.table-compact td.crate,
+#app table.table-compact th.crate,
+#app table.table-compact td.omh,
+#app table.table-compact th.omh {
+  width: 50px;
+}
+#app table.table-compact td.rvcv,
+#app table.table-compact th.rvcv {
+  width: 80px;
+}
+#app table.table-compact td.itemVal,
+#app table.table-compact th.itemVal {
+  width: 100px;
+}
+#app table.table-compact td.ins,
+#app table.table-compact th.ins {
+  width: 130px;
+}
+#app table.table-compact td.val,
+#app table.table-compact th.val {
+  width: 70px;
+}
+#app table.table-compact td.action,
+#app table.table-compact th.action {
+  width: 50px;
+  text-align: center;
+}
+#app table.table-compact td input[type="number"],
+#app table.table-compact th input[type="number"] {
+  text-align: right;
+  padding-right: 2px;
+}
+#app .global {
+  margin-top: 5px;
+}
+#app .loading {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  z-index: 999;
+}
+
+#app .loading-save {
+  z-index: 999;
+  box-sizing: border-box;
+  font-size: 12px !important;
+  margin-right:10px;
+}
+#app .table-filter {
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#app .table-filter .roomFilterCombo {
+  margin-left: 30px;
+  width: 150px;
+  float: left;
+}
+#app fieldset.create {
+  background-color: #c7ddef;
+}
+#app fieldset.modify {
+  background-color: #b2dba1;
+}
+#app fieldset.batch {
+  background-color: #cdbfe3;
+}
+#app #item[disabled] {
+  background-color: #eee !important;
+}
+#app .sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #F5F5F5;
+  -webkit-box-shadow: 0px -7px 21px -1px rgba(102, 102, 102, 0.63);
+  -moz-box-shadow: 0px -7px 21px -1px rgba(102, 102, 102, 0.63);
+  box-shadow: 0px -7px 21px -1px rgba(102, 102, 102, 0.63);
+  z-index: 999;
+}
+#app .sticky-footer h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+#app .sticky-footer ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+#app .sticky-footer ul span.val {
+  display: inline-block;
+  width: 65px;
+  text-align: right;
+  font-weight: bold;
+}
+#app .sticky-footer ul .bold {
+  font-weight: bold;
+}
+#app .sticky-footer ul span.itemSameWidth2 {
+  display: inline-block;
+  width: 75px;
+}
+#app .sticky-footer ul span.itemSameWidth {
+  display: inline-block;
+  width: 115px;
+}
+#app .btn-orange {
+  background-color: #F5A623;
+  color: white;
+  padding: 16px;
+}
+#app .input-group-addon {
+  font-size: 13px;
+  padding: 3px 6px;
+}
+#app .ng-enter {
+  /* transition on enter for .5s */
+  transition: .5s;
+  /* start with opacity 0 (invisible) */
+  opacity: 0;
+}
+#app .ng-enter-active {
+  /* end with opacity 1 (fade in) */
+  opacity: 1;
+}
+
+#app .glyphicon.spinning.ng-animate { -webkit-animation: none 0s; }
+.green {
+  background-color: #00AA00 !important;
+}
+#app .glyphicon.spinning {
+  animation: spin 1s infinite linear;
+  -webkit-animation: spin2 1s infinite linear;
+  font-size: 20px;
+}
+@keyframes spin {
+  from {
+    transform: scale(1) rotate(0deg);
+  }
+  to {
+    transform: scale(1) rotate(360deg);
+  }
+}
+@-webkit-keyframes spin2 {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+li.item-count {
+  display: block;
+  text-align: right;
+  padding: 2px 5px;
+  background: #eee;
+  width: 100%;
+}
+a.hideFooter {
+  font-size: 20px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  text-align: center;
+}
+a.show-sticky {
+  font-size: 16px;
+  display: block;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  padding: 5px;
+  background-color: #286090;
+  color: white;
+  text-align: center;
+}
+@media screen and (max-width: 992px) {
+  #app .item-descr.border-right {
+    border: none;
+  }
+  #app table.table-compact th,
+  #app table.table-compact td {
+    font-size: 8px;
+  }
+  #app table.table-compact th input,
+  #app table.table-compact td input,
+  #app table.table-compact th select,
+  #app table.table-compact td select {
+    font-size: 8px;
+  }
+  #app table.table-compact th.room,
+  #app table.table-compact td.room {
+    width: 80px;
+  }
+  #app table.table-compact th.action a.btn-danger,
+  #app table.table-compact td.action a.btn-danger {
+    padding: 2px;
+    font-size: 8px;
+  }
+  #app table.table-compact th.weight,
+  #app table.table-compact td.weight,
+  #app table.table-compact th.vol,
+  #app table.table-compact td.vol {
+    width: 33px;
+  }
+  #app table.table-compact th.dis,
+  #app table.table-compact td.dis,
+  #app table.table-compact th.pw,
+  #app table.table-compact td.pw,
+  #app table.table-compact th.uw,
+  #app table.table-compact td.uw,
+  #app table.table-compact th.ass,
+  #app table.table-compact td.ass,
+  #app table.table-compact th.crate,
+  #app table.table-compact td.crate,
+  #app table.table-compact th.omh,
+  #app table.table-compact td.omh {
+    width: 30px;
+  }
+}
+@media screen and (max-width: 400px) {
+  #app .table-filter .roomFilterCombo {
+    margin: 0;
+  }
+  #app .fake-combo span.textValue {
+    max-width: 140px;
+  }
+}

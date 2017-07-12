@@ -1,0 +1,387 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Relocately API",
+        "version": "1.0.0"
+    },
+    "host": "relocately.apps.cioan.ca",
+    "schemes": [
+        "http"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/api/lists/itemTypes": {
+            "get": {
+                "summary": "Returns the item types",
+                "tags": [
+                    "Lists"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of item types",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/MultilingualListItem"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/lists/roomTypes": {
+            "get": {
+                "summary": "Returns the room types",
+                "tags": [
+                    "Lists"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of room types",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/MultilingualListItem"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/lists/packagingTypes": {
+            "get": {
+                "summary": "Returns the packaging types",
+                "tags": [
+                    "Lists"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of packaging types",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/MultilingualListItem"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/lists/dismantlingTypes": {
+            "get": {
+                "summary": "Returns the dismantling types",
+                "tags": [
+                    "Lists"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of dismantling types",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/MultilingualListItem"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/lists/languages": {
+            "get": {
+                "summary": "Returns the languages",
+                "tags": [
+                    "Lists"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of languages",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Language"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/lists/insuranceOptions": {
+            "get": {
+                "summary": "Returns the insurance options",
+                "tags": [
+                    "Lists"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of insurance options",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/MultilingualListItem"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/lists/insuranceValues": {
+            "get": {
+                "summary": "Returns the insurance values",
+                "tags": [
+                    "Lists"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of insurance values",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/MultilingualListItem"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/lists/rvcv": {
+            "get": {
+                "summary": "Returns the rvcv values",
+                "tags": [
+                    "Lists"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of rvcv values",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/MultilingualListItem"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/lists/packedBy": {
+            "get": {
+                "summary": "Returns the packed by values",
+                "tags": [
+                    "Lists"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of packed by values",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/MultilingualListItem"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/lists/all": {
+            "get": {
+                "summary": "Returns all list options",
+                "tags": [
+                    "Lists"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of lists",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/ListOfLists"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/templates": {
+            "get": {
+                "summary": "Returns the predefined template items",
+                "tags": [
+                    "Templates"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of template items",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/TemplateItem"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/templates/{id}": {
+            "get": {
+                "summary": "Returns the predefined template items",
+                "tags": [
+                    "Templates"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of template items",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/TemplateItem"
+                            }
+                        }
+                    }
+                }
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "Template item id",
+                    "type": "integer",
+                    "required": true
+                }
+            ]
+        }
+    },
+    "definitions": {
+        "MultilingualListItem": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "$ref": "#/definitions/LocalizationObject"
+                }
+            }
+        },
+        "ListOfLists": {
+            "type": "object",
+            "properties": {
+                "itemTypes": {
+                    "$ref": "#/definitions/MultilingualListItem"
+                },
+                "packedByList": {
+                    "$ref": "#/definitions/MultilingualListItem"
+                },
+                "roomTypes": {
+                    "$ref": "#/definitions/MultilingualListItem"
+                },
+                "packagingList": {
+                    "$ref": "#/definitions/MultilingualListItem"
+                },
+                "dismantlingList": {
+                    "$ref": "#/definitions/MultilingualListItem"
+                },
+                "langList": {
+                    "$ref": "#/definitions/MultilingualListItem"
+                },
+                "RVCVList": {
+                    "$ref": "#/definitions/MultilingualListItem"
+                },
+                "insuranceOptionList": {
+                    "$ref": "#/definitions/MultilingualListItem"
+                },
+                "insuranceValueList": {
+                    "$ref": "#/definitions/MultilingualListItem"
+                }
+            }
+        },
+        "LocalizationObject": {
+            "type": "object",
+            "properties": {
+                "en": {
+                    "type": "string"
+                },
+                "de": {
+                    "type": "string"
+                }
+            }
+        },
+        "Language": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                }
+            }
+        },
+        "TemplateItem": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "type": {
+                    "type": "integer"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "name": {
+                    "$ref": "#/definitions/LocalizationObject"
+                },
+                "length": {
+                    "type": "number",
+                    "format": "double",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                "duration_dismantling": {
+                    "type": "integer"
+                },
+                "duration_assembly": {
+                    "type": "integer"
+                },
+                "surface": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "volume_assembled": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "volume_dismantled": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "bubble_wrap_factor": {
+                    "type": "integer"
+                },
+                "bubble_wrap_width": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "matterss_covers": {
+                    "type": "boolean"
+                },
+                "crating_possible": {
+                    "type": "boolean"
+                },
+                "amount": {
+                    "type": "integer"
+                },
+                "customer_volume": {
+                    "type": "number",
+                    "format": "double"
+                },
+                "duration_dismantling_customer": {
+                    "type": "integer"
+                },
+                "duration_assembly_customer": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

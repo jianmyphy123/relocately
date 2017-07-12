@@ -1,0 +1,452 @@
+body {
+  font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 2rem;
+  letter-spacing: 0.01rem;
+  color: #212121;
+  background-color: white;
+
+  // Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+
+header,footer {
+  background-color: rgb(35, 42, 70);
+  color:white;
+  a, a:hover {
+    color:white;
+  }
+}
+
+header {
+  padding:5px;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+}
+footer {
+  .row {
+    text-align: center;
+    padding:10px 0;
+  }
+}
+
+
+  //state change transition
+  /* start 'enter' transition on main view */
+  #app {
+    label {
+      margin-bottom: 0;
+      font-weight: normal;
+      font-size: 13px;
+      line-height:30px;
+      text-align: right;
+      padding-right:5px;
+    }
+    fieldset legend {
+      margin-bottom:0px;
+      padding-top:0px;
+      font-size:16px;
+    }
+    .form-group {
+      //margin-bottom:0px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+
+    .packingOptions {
+      .comboGroup {
+        display: block;
+        float:left;
+        padding:5px;
+        width:150px;
+
+        & label {
+          display: block;
+          width:100%;
+          text-align: left;
+          font-size:12px;
+          margin:0;
+          line-height:19px;
+        }
+
+      }
+      .btn { margin:5px;
+        line-height:20px;}
+    }
+
+    .btn {
+      padding: 4px 8px;
+      font-size:13px;
+    }
+
+    .fake-combo {
+      border: solid 1px #eaebec;
+      width:100%;
+      .textValue {
+        //max-width:100%;
+      }
+
+      &[disabled], &[disabled] > button {
+        background-color: #eee;
+        cursor: not-allowed;
+        color:black;
+      }
+
+      //width:100%;
+      margin-bottom: 10px;
+
+      > button {
+        width:100%;
+        overflow: hidden;
+        line-height: 20px;
+      }
+
+      span.textValue {
+        text-overflow: ellipsis;
+        display: block;
+        //max-width: 150px;
+        overflow: hidden;
+        padding-right: 8px;
+      }
+
+      span.caret {
+        position: absolute;
+        right: 5px;
+        top: 12px;
+      }
+
+
+    }
+
+    //.input-3 {
+    //  width:45px;
+    //  min-width:45px;
+    //}
+
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+      padding-left:5px;
+      padding-right:5px;
+    }
+
+    .form-control {
+      //height: 25px;
+      //padding: 2px 5px;
+      font-size: 13px;
+      line-height: 30px;
+      //border-radius: 3px;
+      height:30px;
+      padding:2px;
+      border-radius: 0;
+    }
+
+    .border-right {
+      border-right: solid 1px #999;
+
+    }
+
+    table.table-compact {
+      border-collapse: collapse;
+      table-layout: fixed;
+
+      td, th {
+        padding: 2px 5px;
+        line-height: 20px;
+        font-size: 13px;
+        vertical-align: middle;
+
+        & input, & select, & textarea {
+          border: none;
+          background-color: transparent;
+          width: 100%;
+          font-size: 13px;
+        }
+        a.descr {
+          color: black;
+          display: block;
+          line-height: 15px;
+          height: 15px;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        a.img-check {
+          display: block;
+          text-align: center;
+          img {
+            max-height: 20px;
+          }
+        }
+
+        & select {
+          //padding-left: 7px;
+        }
+
+        &.check {
+          width: 25px;
+          text-align: center;
+        }
+        &.room {
+          width: 115px
+        }
+        &.item {
+        }
+        &.descr {
+        }
+        &.vol, &.weight {
+          width: 45px;
+          text-align: right;
+        }
+        &.amt, &.w, &.h, &.l, &.dmf {
+          width: 37px;
+          text-align: right;
+        }
+        &.amt {width:30px}
+
+        &.dis, &.pw, &.uw, &.ass, &.crate, &.omh {
+          width: 50px
+        }
+
+        &.rvcv {
+          width: 80px
+        }
+        &.itemVal {
+          width: 100px
+        }
+        &.ins {
+          width: 130px
+        }
+        &.val {
+          width: 70px
+        }
+
+        &.action {width:50px;
+          text-align: center;}
+        input[type="number"] {
+          text-align: right;
+          padding-right:2px;
+        }
+      }
+    }
+
+    .global {
+      margin-top:5px;
+    }
+
+    .loading {
+      position:absolute; left: 5px; top:5px;
+      z-index: 999;
+    }
+
+    .table-filter {
+      padding: 0;
+      margin-top:5px;
+      margin-bottom:5px;
+
+      .roomFilterCombo {
+        margin-left: 30px;width: 150px;float:left
+      }
+    }
+
+    fieldset.create {
+      background-color: #c7ddef;
+    }
+    fieldset.modify {
+      background-color: #b2dba1;
+    }
+    fieldset.batch {
+      background-color: #cdbfe3;
+    }
+
+    #item[disabled] {
+      background-color: #eee !important;
+    }
+
+    .sticky-footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      background-color:#F5F5F5;
+      -webkit-box-shadow: 0px -7px 21px -1px rgba(102,102,102,0.63);
+      -moz-box-shadow: 0px -7px 21px -1px rgba(102,102,102,0.63);
+      box-shadow: 0px -7px 21px -1px rgba(102,102,102,0.63);
+      z-index: 999;
+
+      h3 {
+        padding:0; margin: 0;
+        font-size:18px;
+        font-weight:bold;
+        padding-bottom: 10px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding:0;
+        margin:0;
+
+        font-size:13px;
+
+        span.val{
+          display: inline-block;
+          width:65px;
+          text-align: right;
+          font-weight: bold;
+        }
+        .bold {
+          font-weight:bold;
+        }
+        span.itemSameWidth2 {
+          display: inline-block;
+          width:75px;
+        }
+        span.itemSameWidth {
+          display: inline-block;
+          width:115px;
+
+        }
+      }
+    }
+
+    .btn-orange {
+      background-color:#F5A623;
+      color:white;
+      padding:16px;
+      //width:100%;
+    }
+
+    .input-group-addon {
+      font-size:13px;
+      padding: 3px 6px;
+    }
+
+
+    .ng-enter {
+      /* transition on enter for .5s */
+      transition: .5s;
+
+      /* start with opacity 0 (invisible) */
+      opacity: 0;
+    }
+
+    /* end 'enter' transition on main view */
+    .ng-enter-active {
+      /* end with opacity 1 (fade in) */
+      opacity: 1;
+    }
+
+    .glyphicon.spinning {
+      animation: spin 1s infinite linear;
+      -webkit-animation: spin2 1s infinite linear;
+      font-size:20px;
+    }
+    .glyphicon.spinning.ng-animate  {
+      -webkit-animation: none 0s;
+    }
+
+    @keyframes spin {
+      from { transform: scale(1) rotate(0deg); }
+      to { transform: scale(1) rotate(360deg); }
+    }
+
+    @-webkit-keyframes spin2 {
+      from { -webkit-transform: rotate(0deg); }
+      to { -webkit-transform: rotate(360deg); }
+    }
+  }
+
+//hide numeric spinners in chrome & ffox
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+li.item-count {
+  display: block;
+  text-align: right;
+  padding: 2px 5px;
+  background: #eee;
+  width: 100%;
+}
+
+a.hideFooter {
+  font-size:20px;
+  display: block;
+  width:20px;
+  height:20px;
+  position:absolute;
+  right: 0px;
+  top:0px;
+  text-align: center;
+}
+
+a.show-sticky {
+  font-size:16px;
+  display: block;
+  position:fixed;
+  right: 0px;
+  bottom:0px;
+  padding:5px;
+  background-color:#286090;
+  color:white;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  #app  {
+    .item-descr.border-right {
+      border: none;
+    }
+
+    table.table-compact {
+      th, td {
+        font-size: 8px;
+        input, select {
+          font-size: 8px;
+
+        }
+
+        &.room {width:80px; }
+        &.action a.btn-danger { padding:2px;font-size:8px; }
+
+        &.weight, &.vol {
+          width:33px;
+        }
+
+        &.dis, &.pw, &.uw, &.ass, &.crate, &.omh {
+          width: 30px
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #app .table-filter .roomFilterCombo {
+    margin:0;
+  }
+
+  #app .fake-combo span.textValue {
+    max-width:140px;
+  }
+}
+
+#app .loading-save {
+  z-index: 999;
+  box-sizing: border-box;
+  font-size: 12px !important;
+  margin-right:10px;
+}

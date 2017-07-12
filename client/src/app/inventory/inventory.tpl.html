@@ -1,0 +1,307 @@
+<header>
+  <div class="container">
+    <div class="col-xs-12 clearfix">
+      <a class="col-xs-3" href="#/"><img src="assets/images/relocately_dark_bg.png" class="logo" /></a>
+      <div class="col-xs-7"></div>
+
+
+      <div class="col-xs-2 text-right" style="padding-top:10px">
+        <fake-combo id="lang" option-list="vm.langList" ng-change="vm.changeLanguage()" ng-model="vm.options.lang" default-text="Language"></fake-combo>
+      </div>
+    </div>
+  </div>
+
+  <span class="loading glyphicon glyphicon-refresh spinning" ng-show="loading"></span>
+</header>
+
+<div class="container" id="app">
+
+  <div class="row">
+
+
+      <fieldset class="special" ng-class="{ 'create': vm.selectionCount == 0, 'modify': vm.selectionCount == 1, 'batch': vm.selectionCount > 1 }" style="padding:5px; margin-top: 5px;" ng-keypress="vm.itemKeyPress($event);">
+
+        <div class="form-group border-right col-md-3 col-sm-5 room-and-type">
+          <fake-combo ng-disabled="vm.selectionCount > 1" option-list="vm.roomTypeList" ng-model="vm.model.roomType" default-text="Room"></fake-combo>
+          <fake-combo ng-disabled="vm.selectionCount > 1" option-list="vm.itemTypeList" ng-model="vm.model.type" default-text="Type"></fake-combo>
+        </div>
+
+
+        <div class="form-group border-right item-descr col-md-4 col-sm-7" style="margin-top:0;padding:0">
+          <div class="form-group col-sm-12 col-xs-12" style="padding-right: 5px;">
+              <div class="col-sm-9 col-xs-8" style="padding:0">
+                <input id="item" type="text" ng-disabled="vm.selectionCount > 1" class="form-control" placeholder="Start typing item name" ng-model="vm.model.item" uib-typeahead="invItem.text for invItem in vm.allInventoryTemplates | filter:{text: $viewValue}" typeahead-show-hint="true" typeahead-min-length="1" typeahead-on-select="vm.itemSelected($item, $model, $label, $event)" ng-blur="vm.updateItemName()" typeahead-popup-template-url-x="src/app/inventory/typeahead-custom-template.tpl.html">
+              </div>
+            <div class="form-group col-sm-3 col-xs-4" style="padding:0;margin:0">
+              <div class="input-group">
+                  <div class="input-group-addon">&times;</div>
+                  <input ng-disabled="vm.selectionCount > 1" class="form-control" id="amount" type="number" step="1" min="0" ng-model="vm.model.amount" />
+              </div>
+            </div>
+        </div>
+
+        <div class="form-group col-sm-12">
+          <input type="text" placeholder="Description" class="form-control" ng-disabled="vm.selectionCount > 1" id="descr" ng-model="vm.model.descr" />
+        </div>
+      </div>
+
+        <div class="clearfix visible-sm"></div>
+
+        <div class="form-group col-md-5 col-sm-12" style="margin-top:0">
+          <div class="form-group col-md-12 col-sm-6" style="padding:0">
+            <div class="input-group">
+              <div class="input-group-addon">CM</div>
+              <input type="number" ng-disabled="vm.selectionCount > 1" class="form-control input-3" id="height" ng-model="vm.model.height" valid-number="" min="0" placeholder="W">
+              <div class="input-group-addon">&times;</div>
+              <input type="number" ng-disabled="vm.selectionCount > 1" class="form-control input-3" id="width" ng-model="vm.model.width"  valid-number="" min="0" placeholder="H">
+              <div class="input-group-addon">&times;</div>
+              <input type="number" ng-disabled="vm.selectionCount > 1" class="form-control input-3" id="depth" ng-model="vm.model.depth"  valid-number="" min="0" placeholder="D">
+            </div>
+          </div>
+
+          <div class="form-group col-md-12 col-sm-6" style="padding:0">
+            <div class="col-sm-4 col-xs-4" style="padding-left:0">
+              <div class="input-group">
+                <div class="input-group-addon">DMF</div>
+                <input type="number" ng-disabled="vm.selectionCount > 1" min="0" max="1" step="0.25" valid-number="" class="form-control" id="disFactor" ng-change="vm.dismantlingFactorChanged()" ng-model="vm.model.dismantlingFactor" placeholder="1" ng-model-options="{ allowInvalid: true, updateOn: 'blur' }">
+              </div>
+            </div>
+            <div class="col-sm-4 col-xs-4" style="padding:0">
+                <div class="input-group">
+                  <div class="input-group-addon">KG</div>
+                  <input type="number" ng-disabled="vm.selectionCount > 1" class="form-control" id="weight" ng-model="vm.model.weight"  valid-number="" min="0" placeholder="0">
+                </div>
+            </div>
+            <div class="col-sm-4 col-xs-4" style="padding-right:0">
+
+              <div class="input-group">
+                <div class="input-group-addon">&euro;</div>
+                <input type="number" ng-model-options="{ allowInvalid: true }" ng-disabled="vm.selectionCount > 1" class="form-control" placeholder="Value in €" id="replValue" ng-model="vm.model.replValue" valid-number="" min="0" step="50"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="form-group col-md-12 packingOptions">
+          <div class="col-sm-10">
+          <div class="comboGroup">
+            <label>Dismantling</label>
+            <fake-combo option-list="vm.dismantlingTypeList" key-press="vm.itemKeyPress(evt);" ng-model="vm.model.dismantlingType" ng-change="vm.dismantlingTypeChanged()" default-text="Dismantling"></fake-combo>
+          </div>
+          <div class="comboGroup">
+            <label>Packing & Wrapping</label>
+            <fake-combo option-list="vm.dismantlingTypeList" key-press="vm.itemKeyPress(evt);" ng-model="vm.model.packedBy" default-text="Packing & Wrapping" tabindex=100></fake-combo>
+          </div>
+          <div class="comboGroup">
+            <label>Unpacking & Unwrapping</label>
+            <fake-combo option-list="vm.dismantlingTypeList" key-press="vm.itemKeyPress(evt);" ng-model="vm.model.unpackedBy" default-text="Unpacking & Unwrapping" tabindex=101></fake-combo>
+          </div>
+
+          <div class="comboGroup">
+            <label>Assembling</label>
+            <fake-combo option-list="vm.dismantlingTypeList" key-press="vm.itemKeyPress(evt);" ng-model="vm.model.assemblingType" default-text="Assembling"></fake-combo>
+          </div>
+        <!--  <div class="comboGroup">
+            <label>1 man handling</label>
+            <fake-combo option-list="vm.yesNoList" key-press="vm.itemKeyPress(evt);" ng-model="vm.model.oneManHandling" default-text="1 man handling"></fake-combo>
+          </div>
+          <div class="comboGroup">
+            <label>Crate required</label>
+            <fake-combo option-list="vm.dismantlingTypeList" key-press="vm.itemKeyPress(evt);" ng-model="vm.model.crate" default-text="Crate required"></fake-combo>
+          </div> -->
+          </div>
+
+          <div class="col-sm-2">
+          <a href="javascript:;" class="btn btn-orange pull-right" ng-click="vm.saveItem();" ng-disabled="!vm.canSaveModel()">{{vm.selectionCount == 0 ? 'Add item' : ( vm.selectionCount > 1 ? 'Batch update items' : 'Update item' )}}</a>
+          </div>
+
+        </div>
+
+        <div class="clearfix"></div>
+      </fieldset>
+
+      <div class="table-filter col-xs-12 clearfix">
+        <div class="form-group col-sm-7 col-xs-12" style="padding-left:0">
+
+          <fake-combo class="roomFilterCombo" id="roomTypeFilter" option-list="vm.roomTypeFilterList" ng-change="vm.changeFilter()"  ng-model="vm.filter.roomType" default-text="Room type"></fake-combo>
+          <fake-combo style="margin-left: 5px;width: 200px;float:left" id="typeFilter" option-list="vm.itemTypeFilterList" ng-change="vm.changeFilter()"  ng-model="vm.filter.type" default-text="Item type"></fake-combo>
+
+        </div>
+
+        <div class="form-group col-sm-5 col-xs-12 text-right pull-right" style="padding-right:0">
+          <label>View </label>
+          <div class="btn-group" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+              <a href="javascript:;" class="btn" ng-click="vm.switchView('volume');" ng-class="{ 'btn-default': vm.viewType != 'volume', 'btn-primary': vm.viewType == 'volume' }">Volume</a>
+            </div>
+            <div class="btn-group" role="group">
+              <a href="javascript:;" class="btn" ng-click="vm.switchView('insurance');" ng-class="{ 'btn-default': vm.viewType != 'insurance', 'btn-primary': vm.viewType == 'insurance' }">Insurance</a>
+            </div>
+            <!--<div class="btn-group" role="group">-->
+              <!--<a href="javascript:;" class="btn" ng-click="vm.switchView('packaging');" ng-class="{ 'btn-default': vm.viewType != 'packaging', 'btn-primary': vm.viewType == 'packaging' }">Packaging</a>-->
+            <!--</div>-->
+          </div>
+
+        </div>
+      </div>
+
+        <!-- Table starts here -->
+      <div class="col-xs-12" ng-style=" { 'padding-bottom': vm.hideFooter ? '0' : '150px' }">
+          <table id="table" class="table table-hover table-striped table-bordered table-compact" ng-model-options="{ allowInvalid: true, debounce: 500, updateOn: 'default', '*': '$inherit' }">
+            <thead>
+              <tr>
+                <th class="check"><input type="checkbox" ng-model-options="{ debounce: 0, updateOn: 'default', '*': '$inherit' }" ng-change="vm.toggleAll()" ng-model="vm.isAllChecked" /></th>
+                <th class="room">Type</th>
+                <th class="room">Room</th>
+                <th class="item">Item</th>
+                <th class="descr">Description</th>
+                <th ng-show="vm.viewType == 'volume'" class="amt">#</th>
+                <th ng-show="vm.viewType == 'volume'" class="h">H</th>
+                <th ng-show="vm.viewType == 'volume'" class="w">W</th>
+                <th ng-show="vm.viewType == 'volume'" class="l">L</th>
+                <th ng-show="vm.viewType == 'volume'" class="dmf">DMF</th>
+                <th ng-show="vm.viewType == 'volume'" class="vol">m<sup>3</sup></th>
+                <th ng-show="vm.viewType == 'volume'" class="dis">DIS.</th>
+                <th ng-show="vm.viewType == 'volume'" class="pw">P&W</th>
+                <th ng-show="vm.viewType == 'volume'" class="uw">UP&W</th>
+                <th ng-show="vm.viewType == 'volume'" class="ass">ASS.</th>
+                <th ng-show="vm.viewType == 'volume'" class="crate">Crate</th>
+                <th ng-show="vm.viewType == 'volume'" class="omh">1MH</th>
+                <th ng-show="vm.viewType == 'volume'" class="weight">kg</th>
+
+                <th ng-show="vm.viewType == 'insurance'" class="rvcv" style="width:80px">RV / CV</th>
+                <th ng-show="vm.viewType == 'insurance'" class="itemVal" style="width:100px">Item's value (€)</th>
+                <th ng-show="vm.viewType == 'insurance'" class="ins" style="width:130px">Insurance option</th>
+                <th ng-show="vm.viewType == 'insurance'" class="val" style="width:70px">Value</th>
+
+                <th class="action">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-if="vm.filteredInventoryList.length == 0">
+                <td colspan="18"><h3>Nothing to show!</h3></td>
+              </tr>
+
+              <tr ng-repeat="item in vm.filteredInventoryList track by $index" class="grid-row">
+                <td class="check"><input type="checkbox" ng-change="vm.updateSelectedItems()" ng-model="item.isChecked" ng-model-options="{ debounce: 0, updateOn: 'default', '*': '$inherit' }" /></td>
+                <td class="type"><select ng-options="type.id as type.text for type in vm.itemTypeList" ng-change="vm.updateItemProp(item, 'type')" ng-model="item.type"></select></td>
+                <td class="room"><select ng-options="type.id as type.text for type in vm.roomTypeList" ng-change="vm.updateItemProp(item, 'roomType')" ng-model="item.roomType"></select></td>
+                <td class="item"><input type="text" ng-model="item.text" ng-change="vm.updateItemProp(item, 'name')" /></td>
+                <td class="descr">
+                  <editable-text ng-model="item.descr" ng-change="vm.updateItemProp(item, 'descr')" ng-model-options="{ debounce: 0, updateOn: 'default', '*': '$inherit' }" ></editable-text>
+                </td>
+
+                <td class="amt" ng-show="vm.viewType == 'volume'"><input type="number" ng-model="item.amount" ng-change="vm.updateItemProp(item, 'amount', true)"  valid-number="" min="0" /></td>
+                <td class="h" ng-show="vm.viewType == 'volume'"><input type="number" ng-model="item.height" ng-change="vm.updateItemProp(item, 'height', true)"  valid-number="" min="0" /></td>
+                <td class="w" ng-show="vm.viewType == 'volume'"><input type="number" ng-model="item.width" ng-change="vm.updateItemProp(item, 'width', true)"  valid-number="" min="0" /></td>
+                <td class="l" ng-show="vm.viewType == 'volume'"><input type="number" ng-model="item.depth" ng-change="vm.updateItemProp(item, 'depth', true)"  valid-number="" min="0" /></td>
+                <td class="dmf" ng-show="vm.viewType == 'volume'"><input type="number" ng-model="item.dismantlingFactor" ng-change="vm.updateItemProp(item, 'dismantlingFactor', true)"  valid-number="" min="0" max="1" step="0.1" /></td>
+                <td class="vol" ng-show="vm.viewType == 'volume'">{{item.volume | number:2}}</td>
+
+                <td class="dis" ng-show="vm.viewType == 'volume'"><toggle-value ng-model="item.dismantlingType" ng-change="vm.updateItemProp(item, 'dismantlingType', true)" value-list="vm.dismantlingTypeList"></toggle-value></td>
+                <td class="pw" ng-show="vm.viewType == 'volume'"><toggle-value ng-model="item.packedBy" ng-change="vm.updateItemProp(item, 'packedBy', true)" value-list="vm.dismantlingTypeList"></toggle-value></td>
+                <td class="uw" ng-show="vm.viewType == 'volume'"><toggle-value ng-model="item.unpackedBy" ng-change="vm.updateItemProp(item, 'unpackedBy', true)" value-list="vm.dismantlingTypeList"></toggle-value></td>
+                <td class="ass" ng-show="vm.viewType == 'volume'"><toggle-value ng-model="item.assemblingType" ng-change="vm.updateItemProp(item, 'assemblingType', true)" value-list="vm.dismantlingTypeList"></toggle-value></td>
+                <td class="crate" ng-show="vm.viewType == 'volume'"><toggle-value ng-model="item.crate" ng-change="vm.updateItemProp(item, 'crate', true)" value-list="vm.dismantlingTypeList"></toggle-value></td>
+                <td class="omh" ng-show="vm.viewType == 'volume'"><toggle-value ng-model="item.oneManHandling" ng-change="vm.updateItemProp(item, 'oneManHandling', true)" value-list="vm.yesNoList"></toggle-value></td>
+
+                <td class="weight" ng-show="vm.viewType == 'volume'"><input type="number" ng-model="item.weight" ng-change="vm.updateItemProp(item, 'weight', true)"  valid-number="" min="0" /></td>
+
+                <td ng-show="vm.viewType == 'insurance'"><select id="rvcv" ng-options="type.id as type.text for type in vm.rvcvList" ng-model="item.RV_CV"  ng-change="vm.updateItemProp(item, 'RV_CV')"></select></td>
+                <td ng-show="vm.viewType == 'insurance'"><input type="number" placeholder="Value in €" ng-model="item.replValue" ng-change="vm.updateItemProp(item, 'replValue', true)" valid-number="" min="0" step="50" /></td>
+                <td ng-show="vm.viewType == 'insurance'"><select id="insOption" ng-options="type.id as type.text for type in vm.insuranceOptionsList" ng-model="item.insurance_option" ng-change="vm.updateItemProp(item, 'insurance_option')"></select></td>
+                <td ng-show="vm.viewType == 'insurance'"><select id="insValue" ng-options="type.id as type.text for type in vm.insuranceValueList" ng-model="item.insurance_value" ng-change="vm.updateItemProp(item, 'insurance_value')"></select></td>
+
+                <!--<td ng-show="vm.viewType == 'packaging'"><select ng-options="type.id as type.text for type in vm.requiresPackagingList" ng-change="vm.updateItemProp(item, 'crate')" ng-model="item.crate"></select></td>-->
+                <!--<td ng-show="vm.viewType == 'packaging'"><select ng-options="packBy.id as packBy.text for packBy in vm.packedByList" ng-change="vm.updateItemProp(item, 'packedBy')" ng-model="item.packedBy"></select></td>-->
+                <!--<td ng-show="vm.viewType == 'packaging'"><select ng-options="packBy.id as packBy.text for packBy in vm.packedByList" ng-change="vm.updateItemProp(item, 'unpackedBy')" ng-model="item.unpackedBy"></select></td>-->
+                <!--<td ng-show="vm.viewType == 'packaging'"><select ng-options="type.id as type.text for type in vm.dismantlingTypeList" ng-change="vm.updateItemProp(item, 'dismantlingType')" ng-model="item.dismantlingType"></select></td>-->
+                <!--<td ng-show="vm.viewType == 'packaging'"><select ng-options="type.id as type.text for type in vm.yesNoList" ng-change="vm.updateItemProp(item, 'assemblingType')" ng-model="item.assemblingType"></select></td>-->
+                <!--<td ng-show="vm.viewType == 'packaging'"><select ng-options="type.id as type.text for type in vm.yesNoList" ng-change="vm.updateItemProp(item, 'oneManHandling')" ng-model="item.oneManHandling"></select></td>-->
+
+
+                <td class="action">
+                  <a class="btn btn-danger btn-xs" aria-label="Edit row" ng-click="vm.remove(item)">
+                    <i class="glyphicon glyphicon-trash"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+
+      <a href="javascript:;" class="show-sticky" ng-show="vm.hideFooter" ng-click="vm.hideFooter = false;"><span class="glyphicon glyphicon-arrow-up"></span></a>
+      <div class="sticky-footer col-xs-12" ng-hide="vm.hideFooter">
+        <a class="hideFooter" href="javascript:;" ng-click="vm.hideFooter = true;">&times;</a>
+
+        <ul class="col-sm-3 col-xs-12">
+          <li ng-show="vm.totals.volume > 0"><b>Volume:</b> <span class="val">{{vm.totals.volume}} m<sup>3</sup></span> net | <span class="val">{{vm.totals.volumeGross}} m<sup>3</sup></span> gross
+          <li ng-show="vm.totals.inventoryValue > 0"><b>Value: </b> <span class="val">&euro;{{ vm.totals.inventoryValue }}</span></li>
+          <li ng-show="vm.totals.weight > 0"><b>Weight: </b> <span class="val">{{ vm.totals.weight }} kg</span></li>
+        </ul>
+
+        <ul class="col-sm-2 col-xs-12">
+          <li ng-show="vm.totals.furnitureVolume > 0"><span class="itemSameWidth2 bold">Furniture: </span><span class="itemSameWidth">{{vm.totals.furnitureVolume}} m<sup>3</sup></span></li>
+          <li ng-show="vm.totals.packmaterialVolume > 0"><span class="itemSameWidth2 bold">Packaging: </span><span class="itemSameWidth">{{vm.totals.packmaterialVolume}} m<sup>3</sup></span></li>
+        </ul>
+
+        <ul class="col-sm-5 col-xs-12">
+          <li ng-show="vm.totals.totalSpecialItems > 0">
+            <span class="itemSameWidth bold">Special items: </span>
+            <span ng-show="vm.totals.totalCars > 0" class="itemSameWidth">{{vm.totals.totalCars}} &times; Car</span>
+            <span ng-show="vm.totals.totalMotorbikes > 0" class="itemSameWidth">{{vm.totals.totalMotorbikes}} &times; Motorbike</span>
+            <span ng-show="vm.totals.totalPianos > 0" class="itemSameWidth">{{vm.totals.totalPianos}} &times; Piano</span>
+          </li>
+
+          <li ng-show="vm.totals.totalBoxes > 0">
+            <span class="itemSameWidth bold">Pack. Mat: </span>
+            <span ng-show="vm.totals.totalMovingBoxes > 0" class="itemSameWidth">{{vm.totals.totalMovingBoxes}} &times; Moving box</span>
+            <span ng-show="vm.totals.totalClothingBoxes > 0" class="itemSameWidth">{{vm.totals.totalClothingBoxes}} &times; Clothing box</span>
+            <span ng-show="vm.totals.totalBookBoxes > 0" class="itemSameWidth">{{vm.totals.totalBookBoxes}} &times; Book box</span>
+            <span ng-show="vm.totals.totalWardrobeBox > 0" class="itemSameWidth">{{vm.totals.totalWardrobeBox}} &times; Wardrobe box</span>
+            <span ng-show="vm.totals.totalWoodCrates > 0" class="itemSameWidth">{{vm.totals.totalWoodCrates}} &times; Wood crates</span>
+          </li>
+        </ul>
+            <!--<li ng-show="vm.totals.totalSpecialItems > 0"><span class="val">{{vm.totals.totalSpecialItems}}</span> special items</li>-->
+            <!--<li class="sep"></li>-->
+            <!--<li ng-show="vm.totals.totalCars > 0"><span class="val">{{ vm.totals.totalCars }}</span> x cars</li>-->
+            <!--<li ng-show="vm.totals.totalMotorbikes > 0"><span class="val">{{ vm.totals.totalMotorbikes }}</span> x motorbikes</li>-->
+            <!--<li ng-show="vm.totals.totalPianos > 0"><span class="val">{{ vm.totals.totalPianos }}</span> x pianos</li>-->
+          <!--</ul>-->
+        <!--</ul>-->
+        <!--<div class="col-sm-3 col-xs-6">-->
+          <!--<h3>Packaging material</h3>-->
+
+          <!--<ul>-->
+            <!--<li ng-show="vm.totals.totalMovingBoxes > 0"> <span class="val">{{ vm.totals.totalMovingBoxes }}</span> x Moving box</li>-->
+            <!--<li ng-show="vm.totals.totalBookBoxes > 0"> <span class="val">{{ vm.totals.totalBookBoxes }}</span> x Book box</li>-->
+            <!--<li ng-show="vm.totals.totalWardrobeBox > 0"> <span class="val">{{ vm.totals.totalWardrobeBox }}</span> x Wardrobe box</li>-->
+            <!--<li ng-show="vm.totals.totalWoodCrates > 0"> <span class="val">{{ vm.totals.totalWoodCrates }}</span> x Wooden crates</li>-->
+          <!--</ul>-->
+        <!--</div>-->
+
+        <div class="clearfix visible-xs"></div>
+
+        <!--<div class="col-sm-3 col-xs-6">-->
+          <!--<h3>Inventory value</h3>-->
+          <!--<ul>-->
+            <!--<li ng-show="vm.totals.inventoryValue > 0"> <span class="val">&euro;{{ vm.totals.inventoryValue }}</span> Inventory value</li>-->
+          <!--</ul>-->
+        <!--</div>-->
+
+        <div class="col-sm-2 col-xs-6 text-rightx" >
+          <a class="btn btn-orange" ng-click="vm.syncData()" href="javascript:;" ng-class="synced ? 'green':''">
+            <span class="loading-save glyphicon glyphicon-refresh spinning" ng-show="loading && startedsave" ></span>
+            <span>{{!loading ? synced ? "Saved":" Save" : startedsave ?"Saving..." :"Save" }}</span>
+            <!--{{synced}}-->
+          </a>
+          <a class="btn btn-orange" ng-click="vm.getPdf()" ng-show="synced" href="javascript:;">
+            Get PDF
+          </a>
+        </div>
+
+
+      </div>
+  </div>
+</div>

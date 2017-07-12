@@ -1,0 +1,265 @@
+Item Cluster - important for pricing,More narrow cluster - not directly important for pricing,"Name of Item, German - searched by account manager when going through the IOI","Name of Item, English - searched by account manager when going through the IOI",Required for volume calculation,Required for volume calculation,Required for volume calculation,The factor with which the volume is multiplied to account for volume gains from dismantling work,Not required anymore,Not required anymore,"Not used currently - this should help approximate the surface to derive packaging material needs to forecast the amounts required and the ""additional volume"" from packaging material",Volume w/o dismanlint consideration,Dismantled volume,"Not used currently - this should help approximate the surface to derive packaging material needs to forecast the amounts required and the ""additional volume"" from packaging material","Not used currently - this should help approximate the surface to derive packaging material needs to forecast the amounts required and the ""additional volume"" from packaging material","Not used currently - this should help approximate the surface to derive packaging material needs to forecast the amounts required and the ""additional volume"" from packaging material","Not used currently - this should help approximate the surface to derive packaging material needs to forecast the amounts required and the ""additional volume"" from packaging material",number of items  of this type with these dimensions,final volume,Not required anymore,Not required anymore
+Type,Category,"Name
+ German","Name
+ English","Length
+ cm","Width
+ cm","Height
+ cm","Dismantling
+ Factor","Dismantling
+ Duration
+ in Minutes","Assembly
+ Duration
+ in Minutes","Surface
+ in
+ SQM","Volume
+ assembled
+ in CBM","Volume
+ dismantled
+ in CBM","Bubble Wrap
+ Factor","Bubble Wrap
+ in Meter",Mattress Covers,"Crating
+ possible",Amount,"Customer
+ CBM","Customer
+ Dismantling Duration","Customer
+ Assembly Duration"
+Furniture,Animals,Aquarium 100 Liter,Aquarium / Fish Tank - 100 Liter,60,60,30,100%,0,0,"1,44","0,11","0,11",2,"2,88",0,0,,0,0,0
+Furniture,Animals,Aquarium 200 Liter,Aquarium / Fish Tank - 200 Liter,60,60,60,100%,0,0,"2,16","0,22","0,22",2,"4,32",0,0,,0,0,0
+Furniture,Animals,Aquarium 50 Liter,Aquarium / Fish Tank - 50 Liter,30,60,30,100%,0,0,"0,9","0,05","0,05",2,"1,8",0,0,,0,0,0
+Furniture,Animals,"Hundehaus, Hundehütte",Dog House,100,100,40,50%,10,15,"3,6","0,40","0,20",1,"3,6",0,0,,0,0,0
+Furniture,Animals,"Käfig, Vogelkäfig",Bird Cage,160,120,60,100%,0,0,"7,2","1,15","1,15",1,"7,2",0,0,,0,0,0
+Furniture,Animals,"Korb, Hundekorb",Dog Basket,25,60,50,100%,0,0,"1,15","0,08","0,08",1,"1,15",0,0,,0,0,0
+Furniture,Animals,Kratzbaum,Cat Scratching tree middle,130,60,50,100%,0,0,"3,46","0,39","0,39",1,"3,46",0,0,,0,0,0
+Furniture,Animals,Laufstall,"Playpen, Non-Folding",70,100,80,50%,10,10,"4,12","0,56","0,28",1,"4,12",0,0,,0,0,0
+Furniture,Animals,Reitsattel,Saddle,50,40,30,100%,0,0,"0,94","0,06","0,06",1,"0,94",0,0,,0,0,0
+Car,Automobile,Mofa,Moped / Scooter,150,40,100,100%,0,0,5,"0,60","0,60",1,5,0,0,,0,0,0
+Car,Automobile,Reifen,Car Tire,50,50,30,100%,0,0,"1,1","0,08","0,08",1,"1,1",0,0,,0,0,0
+Furniture,Bed,"Bett (<1,60m)",Bed (<1.60m),200,120,60,75%,15,20,"8,64","1,44","1,08",1,"8,64",0,0,,0,0,0
+Furniture,Bed,"Bett (>1,60m)",Bed (>1.60m),200,200,60,75%,15,30,"12,8","2,40","1,80",1,"12,8",0,0,,0,0,0
+Furniture,Bed,"Bett, Boxspringbett (0,90m)",Divan (Single),200,90,70,75%,15,30,"7,66","1,26","0,95",1,"7,66",0,0,,0,0,0
+Furniture,Bed,"Bett, Boxspringbett (1,80m)",Divan (Queen Size),200,180,60,75%,20,20,"11,76","2,16","1,62",1,"11,76",0,0,,0,0,0
+Furniture,Bed,"Bett, Boxspringbett (2,00m)",Divan (King Size),200,200,60,75%,20,20,"12,8","2,40","1,80",1,"12,8",0,0,,0,0,0
+Furniture,Bed,"Bett, Doppelbett (1,80m)",Bed (Queen Size),200,180,60,75%,15,20,"11,76","2,16","1,62",1,"11,76",0,0,,0,0,0
+Furniture,Bed,"Bett, Doppelbett (2,00m)",Bed (King Size),200,210,60,75%,15,30,"13,32","2,52","1,89",1,"13,32",0,0,,0,0,0
+Furniture,Bed,"Bett, Einzelbett (0,90m)",Bed (Single),200,90,60,75%,10,20,"7,08","1,08","0,81",1,"7,08",0,0,,0,0,0
+Furniture,Bed,"Bett, Futonbett (1,60m)","Bed, Futon (1.60m)",200,160,30,75%,15,30,"8,56","0,96","0,72",1,"8,56",0,0,,0,0,0
+Furniture,Bed,"Bett, Hochbett (0,90m)",Bunk / High Bed (Single),200,90,180,75%,25,50,"14,04","3,24","2,43",1,"14,04",0,0,,0,0,0
+Furniture,Bed,"Bett, Kinderbett, Babybett",Child Bed,140,90,80,75%,10,20,"6,2","1,01","0,76",1,"6,2",0,0,,0,0,0
+Furniture,Bed,"Bett, Wasserbett (1,80m)",Water Bed (1.80m),200,180,60,75%,50,100,"11,76","2,16","1,62",1,"11,76",0,0,,0,0,0
+Furniture,Bed,"Lattenrost 0,90m",Slatted Frame (Single),200,90,30,100%,0,0,"5,34","0,54","0,54",1,"5,34",1,0,,0,0,0
+Furniture,Bed,"Lattenrost 1,60m",Slatted Frame (Double),200,160,30,100%,0,0,"8,56","0,96","0,96",1,"8,56",1,0,,0,0,0
+Furniture,Bed,"Lattenrost 1,80m",Slatted Frame (Queen Size),200,180,30,100%,0,0,"9,48","1,08","1,08",1,"9,48",1,0,,0,0,0
+Furniture,Bed,"Lattenrost 2,00m",Slatted Frame (King Size),200,180,30,100%,0,0,"9,48","1,08","1,08",1,"9,48",1,0,,0,0,0
+Furniture,Bed,"Matratze (0,90m)",Mattress (Single),200,90,30,100%,0,0,"5,34","0,54","0,54",1,"5,34",1,0,,0,0,0
+Furniture,Bed,"Matratze (1,60m)",Mattress (Double),200,160,30,100%,0,0,"8,56","0,96","0,96",1,"8,56",1,0,,0,0,0
+Furniture,Bed,"Matratze (1,80m)",Mattress (Queen Size),200,180,30,100%,0,0,"9,48","1,08","1,08",1,"9,48",1,0,,0,0,0
+Furniture,Bed,"Matratze (2,00m)",Mattress (King Size),200,180,30,100%,0,0,"9,48","1,08","1,08",1,"9,48",1,0,,0,0,0
+Furniture,Bench,"Bank, Gartenbank, Bierbank",Harvest Bench,120,20,40,50%,10,15,"1,6","0,10","0,05",1,"1,6",0,0,,0,0,0
+Furniture,Bench,"Bank, Hantelbank",Weight Bench,140,65,50,50%,10,15,"3,87","0,46","0,23",1,"3,87",0,0,,0,0,0
+Furniture,Bench,"Bank, Sitzbank (<1,50m)",Bench (<1.50m),100,80,40,50%,10,15,"3,04","0,32","0,16",1,"3,04",0,0,,0,0,0
+Furniture,Bench,"Bank, Sitzbank (>1,50m)",Bench (>1.50m),200,80,40,50%,15,15,"5,44","0,64","0,32",1,"5,44",0,0,,0,0,0
+Furniture,Board,"Board, Highboard (<1,50m)","Board, Highboard (<1.50m)",100,40,90,50%,10,20,"3,32","0,36","0,18",1,"3,32",0,0,,0,0,0
+Furniture,Board,"Board, Highboard (>1,50m)","Board, Highboard (>1.50m)",200,40,90,50%,15,30,"5,92","0,72","0,36",1,"5,92",0,0,,0,0,0
+Furniture,Board,"Board, Lowboard (<1,50m)","Board, Lowboard (<1.50m)",100,40,30,50%,10,20,"1,64","0,12","0,06",1,"1,64",0,0,,0,0,0
+Furniture,Board,"Board, Lowboard (>1,50m)","Board, Lowboard (>1.50m)",200,40,30,50%,10,20,"3,04","0,24","0,12",1,"3,04",0,0,,0,0,0
+Furniture,Board,"Board, Sideboard, Anrichte (<1,50m)","Board, Sideboard (<1.50m)",100,40,60,50%,10,20,"2,48","0,24","0,12",1,"2,48",0,0,,0,0,0
+Furniture,Board,"Board, Sideboard, Anrichte (>1,50m)","Board, Sideboard (>1.50m)",200,40,60,1%,15,30,"4,48","0,48","0,00",1,"4,48",0,0,,0,0,0
+Packaging,Box,"Bücherkarton, Bücherbox (0,40m)","Box, Books (0.40m)",45,35,35,100%,5,10,875,"0,06","0,06",1,875,0,0,,0,0,0
+Packaging,Box,"Kleiderbox, Kleiderkarton","Box, Wardrobe, Clothing",60,51,135,100%,5,10,"3,609","0,41","0,41",1,"3,609",0,0,,0,0,0
+Packaging,Box,"Umzugskarton, Umzugsbox (0,60m)","Box, Removal (0.60m)",60,40,40,100%,5,10,"1,28","0,10","0,10",1,"1,28",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Apotheke, Putzmittel","Utility Cabinet, Cupboard",50,90,180,50%,20,40,"5,94","0,81","0,41",1,"5,94",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Eichenschrank","Cupboard, Oak Massive Wood",70,120,160,50%,40,80,"7,76","1,34","0,67",1,"7,76",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Einzelschrank, Hochschrank",Cupboard (Single),60,100,180,50%,15,30,"6,96","1,08","0,54",1,"6,96",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Küche, Porzellan, Geschirr","China Cabinet, Cupboard",50,130,180,50%,20,40,"7,78","1,17","0,59",1,"7,78",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Schrankwand, Wohnwand (<2,50m)","Wall Unit, Entertainment Center (<2.50m)",40,200,180,50%,20,40,"10,24","1,44","0,72",1,"10,24",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Schrankwand, Wohnwand (>2,50m)","Wall Unit, Entertainment Center (>2.50m)",40,300,180,50%,30,60,"14,64","2,16","1,08",1,"14,64",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Schuhschrank (<1,00m)",Shoe Cabinet (<1.00m),25,80,80,50%,20,40,"2,08","0,16","0,08",1,"2,08",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Schuhschrank (>1,00m)",Shoe Cabinet (>1.00m),25,80,140,50%,30,60,"3,34","0,28","0,14",1,"3,34",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Spiegelschrank",Cupboard with mirror,60,160,180,50%,30,30,"9,84","1,73","0,86",1,"9,84",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Unterschrank","Cupboard, base cabinet",60,60,80,50%,15,25,"2,64","0,29","0,14",1,"2,64",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Vorratskammer, Werkzeug",Store Cupboard,60,80,120,50%,20,40,"4,32","0,58","0,29",1,"4,32",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Waffen",Gun Cabinet,35,30,150,50%,20,40,"2,16","0,16","0,08",1,"2,16",0,0,,0,0,0
+Furniture,Cabinet,"Schrank, Wandschrank",Cabinet,60,100,180,50%,20,40,"6,96","1,08","0,54",1,"6,96",0,0,,0,0,0
+Furniture,Chair,"Hocker, Barhocker, Klavierhocker","Stool (Bar, Piano)",40,50,50,100%,0,0,"1,3","0,10","0,10",1,"1,3",0,0,,0,0,0
+Furniture,Chair,Stuhl,,60,50,90,100%,0,0,"2,58","0,27","0,27",1,"2,58",0,0,,0,0,0
+Furniture,Chair,"Stuhl, Bürostuhl, Stuhl mit Armlehne",Office / Desk Chair,60,50,90,100%,0,0,"2,58","0,27","0,27",1,"2,58",0,0,,0,0,0
+Furniture,Chair,"Stuhl, Gartenstuhl, Klappstuhl, Sonnenstuhl","Chair, Porch",60,50,90,100%,0,0,"2,58","0,27","0,27",1,"2,58",0,0,,0,0,0
+Furniture,Chair,"Stuhl, Korbstuhl, Babystuhl, Kinderstuhl",Wicker / Cane Chair,60,50,90,100%,0,0,"2,58","0,27","0,27",1,"2,58",0,0,,0,0,0
+Furniture,Chair,"Stuhl, Schaukelstuhl",Rocking Chair,60,70,100,100%,0,0,"3,44","0,42","0,42",1,"3,44",0,0,,0,0,0
+Furniture,Chair,"Stuhl, Standard, Lounge",Chair,60,50,90,100%,0,0,"2,58","0,27","0,27",1,"2,58",0,0,,0,0,0
+Furniture,Children,Kindersitz (Auto),Baby Car Seat,40,40,60,100%,0,0,"1,28","0,10","0,10",1,"1,28",0,0,,0,0,0
+Furniture,Children,Kinderwagen,Stroller / Buggy / Pram / Push Chair,150,50,120,100%,0,0,"6,3","0,90","0,90",1,"6,3",0,0,,0,0,0
+Furniture,Children,Spielzeugkiste,Toy Chest,40,90,55,100%,0,0,"2,15","0,20","0,20",1,"2,15",0,0,,0,0,0
+Furniture,Children,Trampolin,Trampoline,120,120,40,50%,5,10,"4,8","0,58","0,29",1,"4,8",0,0,,0,0,0
+Furniture,,Trampolin (Groß),,,,,,30,40,0,"0,00","0,00",1,0,0,0,,0,0,0
+Furniture,Couch,Couch / Sofa (Sitzplatz),Couch / Sofa (Seat),90,80,70,"0,75",5,10,"3,82","0,50","0,38",1,"3,82",0,0,,0,0,0
+Furniture,Couch,"Couch / Sofa, 2 Sitze","Couch / Sofa, 2 Seats",90,160,70,"0,75",5,10,"6,38","1,01","0,76",1,"6,38",0,0,,0,0,0
+Furniture,Couch,"Couch / Sofa, 3 Sitze","Couch / Sofa, 3 Seats",90,240,70,"0,75",5,10,"8,94","1,51","1,13",1,"8,94",0,0,,0,0,0
+Furniture,Couch,"Couch / Sofa, 4 Sitze","Couch / Sofa, 4 Seats",90,320,70,"0,75",5,15,"11,5","2,02","1,51",1,"11,5",0,0,,0,0,0
+Furniture,Couch,"Couch / Sofa, 5 Sitze","Couch / Sofa, 5 Seats",90,400,70,"0,75",5,15,"14,06","2,52","1,89",1,"14,06",0,0,,0,0,0
+Furniture,Dresser,"Kommode (<1,50m)",Cabinet (<1.50m),40,100,120,"0,5",15,30,"4,16","0,48","0,24",1,"4,16",0,0,,0,0,0
+Furniture,Dresser,"Kommode (>1,50m)",Cabinet (>1.50m),40,200,120,"0,5",30,60,"7,36","0,96","0,48",1,"7,36",0,0,,0,0,0
+Furniture,Electronics,Beamer,Projector,20,30,15,1,0,0,"0,27","0,01","0,01",1,"0,27",0,0,,0,0,0
+Furniture,Electronics,Computer / PC (Desktop),Computer / PC (Desktop),30,30,60,1,0,0,"0,9","0,05","0,05",1,"0,9",0,0,,0,0,0
+Furniture,Electronics,Computer-Bildschirm,Computer Screen / Monitor,23,60,45,1,0,0,"1,023","0,06","0,06",1,"1,023",0,0,,0,0,0
+Furniture,Electronics,Drucker / Kopierer (groß),Office / Table Top Printer (large),60,40,60,1,0,0,"1,68","0,14","0,14",1,"1,68",0,0,,0,0,0
+Furniture,Electronics,Drucker / Kopierer (klein),Office / Table Top Printer (small),40,40,30,1,0,0,"0,8","0,05","0,05",1,"0,8",0,0,,0,0,0
+Furniture,Electronics,Faxgerät,Fax Machine,40,40,30,1,0,0,"0,8","0,05","0,05",1,"0,8",0,0,,0,0,0
+Furniture,Electronics,"Fernseher, Flachbild (<1,20m)",Flat Screen TV (<1.20m),80,50,30,1,0,0,"1,58","0,12","0,12",1,"1,58",0,0,,0,0,0
+Furniture,Electronics,"Fernseher, Flachbild (<1,20m)",Flat Screen TV (<1.20m),160,100,30,1,0,0,"4,76","0,48","0,48",1,"4,76",0,0,,0,0,0
+Furniture,Electronics,Kaffeemaschine,Coffee Maker / Machine,40,40,40,1,0,0,"0,96","0,06","0,06",1,"0,96",0,0,,0,0,0
+Furniture,Electronics,Klimaanlage,"Air Conditioner, AC",40,60,100,1,20,40,"2,48","0,24","0,24",1,"2,48",0,0,,0,0,0
+Furniture,Electronics,"Klimaanlage, Fenster","Window Air Conditioner, AC",60,60,40,1,20,40,"1,68","0,14","0,14",1,"1,68",0,0,,0,0,0
+Furniture,Electronics,Küchenmaschine,Food Processor / Blender / Juicer,30,30,30,1,0,0,"0,54","0,03","0,03",1,"0,54",0,0,,0,0,0
+Furniture,Electronics,"Lautsprecher (<0,50m)",Speakers (<0.50m),25,25,30,1,0,0,425,"0,02","0,02",1,425,0,0,,0,0,0
+Furniture,Electronics,"Lautsprecher (>0,50m))",Speakers (>0.50m),40,40,70,1,0,0,"1,44","0,11","0,11",1,"1,44",0,0,,0,0,0
+Furniture,Electronics,Mikrowelle,Microwave,45,50,40,1,0,0,"1,21","0,09","0,09",1,"1,21",0,0,,0,0,0
+Furniture,Electronics,Nähmaschine,Sewing Machine,40,40,30,1,0,0,"0,8","0,05","0,05",1,"0,8",0,0,,0,0,0
+Furniture,Electronics,"Nähmaschine, Handnähmaschine","Sewing Machine, Mini",20,40,30,1,0,0,"0,52","0,02","0,02",1,"0,52",0,0,,0,0,0
+Furniture,Electronics,Schreibmaschine,Typewriter,30,40,30,1,0,0,"0,66","0,04","0,04",1,"0,66",0,0,,0,0,0
+Furniture,Electronics,Staubsauger,Vacuum Cleaner / Hoover,40,30,30,1,0,0,"0,66","0,04","0,04",1,"0,66",0,0,,0,0,0
+Furniture,Electronics,Stereoanlage / Hi-Fi-System,Stereo / Hi-Fi / Sound System,50,50,50,1,0,0,"1,5","0,13","0,13",1,"1,5",0,0,,0,0,0
+Furniture,Electronics,"Telefon, Telefonanlage",Telephone,20,20,30,1,0,0,"0,32","0,01","0,01",1,"0,32",0,0,,0,0,0
+Furniture,Electronics,Trockner,Dryer,65,65,90,1,0,0,"3,185","0,38","0,38",1,"3,185",0,0,,0,0,0
+Furniture,Electronics,"Ventilator, Deckenventilator",Ceiling Fan,100,100,20,1,0,0,"2,8","0,20","0,20",1,"2,8",0,0,,0,0,0
+Furniture,Electronics,"Ventilator, Standventilator",Pedestal Fan,30,50,100,1,0,0,"1,9","0,15","0,15",1,"1,9",0,0,,0,0,0
+Furniture,Electronics,"Ventilator, Tischventilator",Table Fan,30,50,50,1,0,0,"1,1","0,08","0,08",1,"1,1",0,0,,0,0,0
+Furniture,Electronics,Waschmachine,Washing Machine,65,65,90,1,0,0,"3,185","0,38","0,38",1,"3,185",0,0,,0,0,0
+Furniture,Fitness,"Golftasche, Golfschläger (Set)","Golf Bag, Golf Clubs (Set)",10,10,100,1,0,0,"0,42","0,01","0,01",1,"0,42",0,0,,0,0,0
+Furniture,Fitness,"Laufband, Heimtrainer, Hometrainer, Crosstrainer",Treadmill / Running Machine / Exercise Bike,180,100,160,"0,5",60,120,"12,56","2,88","1,44",1,"12,56",0,0,,0,0,0
+Furniture,Fitness,Rudergerät,Rowing machine,180,80,60,"0,5",40,80,6,"0,86","0,43",1,6,0,0,,0,0,0
+Furniture,Fitness,"Skateboard, Snowboard",Skateboard,100,40,20,1,0,0,"1,36","0,08","0,08",1,"1,36",0,0,,0,0,0
+Furniture,Fitness,Surfboard,Surfboard,150,40,20,1,0,0,"1,96","0,12","0,12",1,"1,96",0,0,,0,0,0
+Furniture,Fitness,Tischtennisplatte,Ping Pong Table,200,160,100,"0,5",10,20,"13,6","3,20","1,60",1,"13,6",0,0,,0,0,0
+Furniture,Garden/Outdoor,Angelkiste,Tackle Box,20,40,30,1,0,0,"0,52","0,02","0,02",1,"0,52",0,0,,0,0,0
+Furniture,Garden/Outdoor,Blumenkasten,Planter Box,50,50,20,1,0,0,"0,9","0,05","0,05",1,"0,9",0,0,,0,0,0
+Furniture,Garden/Outdoor,Bollerwagen,Kids Wagon,100,60,90,"0,5",10,20,"4,08","0,54","0,27",1,"4,08",0,0,,0,0,0
+Furniture,Garden/Outdoor,Fahrrad (Erwachsene),Bike / Bicycle (Adult),20,170,100,1,0,0,"4,48","0,34","0,34",1,"4,48",1,0,,0,0,0
+Furniture,Garden/Outdoor,Fahrrad (Kind),Bike / Bicycle (Child),20,120,70,1,0,0,"2,44","0,17","0,17",1,"2,44",1,0,,0,0,0
+Furniture,Garden/Outdoor,Fahrradanhänger,Bike Trailer,150,80,100,1,0,0,7,"1,20","1,20",1,7,0,0,,0,0,0
+Furniture,Garden/Outdoor,"Grill (<1,00m)",Barbecue / BBQ Grill (<1.00m),80,60,80,"0,5",0,0,"3,2","0,38","0,19",1,"3,2",0,0,,0,0,0
+Furniture,Garden/Outdoor,"Grill (>1,00m)",Barbecue / BBQ Grill (>1.00m),120,60,80,"0,5",0,0,"4,32","0,58","0,29",1,"4,32",0,0,,0,0,0
+Furniture,Garden/Outdoor,Heizpilz,Chiminea / Patio Heater,40,40,210,1,0,0,"3,68","0,34","0,34",1,"3,68",0,0,,0,0,0
+Furniture,Garden/Outdoor,"Leiter (<2,00m)",Ladder (<2.00m),10,40,150,1,0,0,"1,58","0,06","0,06",1,"1,58",0,0,,0,0,0
+Furniture,Garden/Outdoor,"Leiter (>2,00m)",Ladder (>2.00m),10,40,250,1,0,0,"2,58","0,10","0,10",1,"2,58",0,0,,0,0,0
+Furniture,Garden/Outdoor,"Markise (2,00m)",Retractable Sunsetter (2.00m),60,200,20,"0,5",20,40,"3,44","0,24","0,12",1,"3,44",0,0,,0,0,0
+Furniture,Garden/Outdoor,"Schaukel, Hollywoodschaukel",Garden Swing,100,210,150,"0,5",20,40,"13,5","3,15","1,58",1,"13,5",0,0,,0,0,0
+Furniture,Garden/Outdoor,"Schirm, Sonnenschirm",Parasol / Garden Umbrella,20,20,250,0,0,0,"2,08","0,10","0,00",1,"2,08",0,0,,0,0,0
+Furniture,Garden/Outdoor,Schubkarre,Wheelbarrow,140,60,60,1,0,0,"4,08","0,50","0,50",1,"4,08",0,0,,0,0,0
+Furniture,Garden/Outdoor,Sonnenliege,Sun Lounger,180,50,30,"0,5",5,10,"3,18","0,27","0,14",1,"3,18",0,0,,0,0,0
+Furniture,Garden/Outdoor,Whirlpool,Hot Tub / Jacuzzi / Spa (2-3 Person),200,200,100,"0,5",20,40,16,"4,00","2,00",1,16,0,0,,0,0,0
+Furniture,Glass,"Vitrine, Glasvitrine (<1,50m)",Glass Cabinet (<1.50m),40,180,140,1,15,30,"7,6","1,01","1,01",2,"15,2",0,0,,0,0,0
+Furniture,Glass,"Vitrine, Glasvitrine (>1,50m)",Glass Cabinet (>1.50m),40,120,140,"0,5",25,50,"5,44","0,67","0,34",2,"10,88",0,0,,0,0,0
+Furniture,Kitchen,"Arbeitsplatte, pro Meter",Countertop (per m),60,100,7,"0,5",30,60,"1,424","0,04","0,02",1,"1,424",0,0,,0,0,0
+Furniture,Kitchen,"Buffet Unterteil (<1,60m)",Buffet Base (<1.60m),70,140,120,"0,5",15,30,7,"1,18","0,59",1,7,0,0,,0,0,0
+Furniture,Kitchen,"Buffet Unterteil (>1,60m)",Buffet Base (>1.60m),70,180,120,"0,5",20,40,"8,52","1,51","0,76",1,"8,52",0,0,,0,0,0
+Furniture,Kitchen,Geschirrspülmaschine,Dishwasher,60,55,80,1,40,80,"2,5","0,26","0,26",1,"2,5",0,0,,0,0,0
+Furniture,Kitchen,Herd / Ofen,Stove / Oven / Cooker,60,60,80,1,30,50,"2,64","0,29","0,29",1,"2,64",0,0,,0,0,0
+Furniture,Kitchen,"Servierwagen, Teewagen",Serving Cart,50,80,90,"0,5",10,20,"3,14","0,36","0,18",1,"3,14",0,0,,0,0,0
+Furniture,Kitchen,Toaster,Toaster,10,30,20,1,0,0,"0,22","0,01","0,01",1,"0,22",0,0,,0,0,0
+Furniture,Kitchen,Wasserspender,Water Cooler,50,30,60,1,0,0,"1,26","0,09","0,09",1,"1,26",0,0,,0,0,0
+Furniture,Light,Deckenlampe,,10,60,20,,5,10,"0,4","0,01","0,00",1,"0,4",0,0,,0,0,0
+Furniture,Light,Kronleuchter,Chandelier,80,80,50,"0,5",5,10,"2,88","0,32","0,16",1,"2,88",0,0,,0,0,0
+Furniture,Light,"Lampe, Deckenlampe",Ceiling Fitting,20,60,30,"0,5",10,20,"0,72","0,04","0,02",1,"0,72",0,0,,0,0,0
+Furniture,Light,"Lampe, Steh- / Bodenlampe",Standard Lamp,20,30,60,1,0,0,"0,72","0,04","0,04",1,"0,72",0,0,,0,0,0
+Furniture,Light,"Lampe, Tischlampe",Table Lamp,20,30,30,1,0,0,"0,42","0,02","0,02",1,"0,42",0,0,,0,0,0
+Furniture,Music,E-Piano,Keyboard / Digital Piano / Electric Piano,120,30,15,1,0,0,"1,17","0,05","0,05",1,"1,17",0,0,,0,0,0
+Furniture,Music,Gitarre,Guitar,110,40,15,1,0,0,"1,33","0,07","0,07",1,"1,33",0,0,,0,0,0
+Furniture,Music,"Klavier, Flügel",Grand Piano,60,200,140,1,30,50,"9,68","1,68","1,68",1,"9,68",0,1,,0,0,0
+Furniture,Music,"Klavier, Standard",Spinet Piano,40,140,120,1,0,0,"5,44","0,67","0,67",1,"5,44",0,1,,0,0,0
+Furniture,Music,Schlagzeug,Drums,100,100,100,1,0,0,6,"1,00","1,00",1,6,0,0,,0,0,0
+Furniture,Other,Besen,Broom / Mop,10,40,150,1,0,0,"1,58","0,06","0,06",1,"1,58",0,0,,0,0,0
+Furniture,Other,Bügelbrett,Ironing Board,150,30,10,1,0,0,"1,26","0,05","0,05",1,"1,26",0,0,,0,0,0
+Furniture,Other,"Container, Schreibtischcontainer",Draw Units,60,40,100,"0,5",10,20,"2,48","0,24","0,12",1,"2,48",0,0,,0,0,0
+Furniture,Other,Feuerlöscher,Fire Extinguisher,20,20,30,1,0,0,"0,32","0,01","0,01",1,"0,32",0,0,,0,0,0
+Furniture,Other,Garderobe (lfd. Meter),Coat Rack / Hat Stand (per meter),100,20,60,"0,5",5,10,"1,84","0,12","0,06",1,"1,84",0,0,,0,0,0
+Furniture,Other,"Garderobe, Flurgarderobe",Coat Rack / Hat Stand,20,20,180,1,5,10,"1,52","0,07","0,07",1,"1,52",0,0,,0,0,0
+Furniture,Other,Kinderauto,Kid's Jeep / Scooter,80,60,30,1,0,0,"1,8","0,14","0,14",1,"1,8",0,0,,0,0,0
+Furniture,Other,Kleidersack,Garment Bag,20,60,100,1,0,0,"1,84","0,12","0,12",1,"1,84",0,0,,0,0,0
+Furniture,Other,Koffer,Suitcase,30,50,80,1,0,0,"1,58","0,12","0,12",1,"1,58",0,0,,0,0,0
+Furniture,Other,"Korb, Wäschekorb",Hamper / Clothes / Linen Basket,50,50,100,1,0,0,"2,5","0,25","0,25",1,"2,5",0,0,,0,0,0
+Furniture,Other,Pinnwand,Notice Board,5,80,60,1,0,0,"1,1","0,02","0,02",1,"1,1",0,0,,0,0,0
+Furniture,Other,"Raumteiler, Raumtrenner",Room Divider,200,30,200,"0,5",5,10,"10,4","1,20","0,60",1,"10,4",0,0,,0,0,0
+Furniture,Other,Regenschirm,Umbrella,10,10,100,1,0,0,"0,42","0,01","0,01",1,"0,42",0,0,,0,0,0
+Furniture,Other,Rollstuhl,Wheelchair,90,70,100,1,0,0,"4,46","0,63","0,63",1,"4,46",0,0,,0,0,0
+Furniture,Other,Rucksack,Backpack,30,40,70,1,0,0,"1,22","0,08","0,08",1,"1,22",0,0,,0,0,0
+Furniture,Other,"Sessel, Fernsehsessel, Ledersessel, Polstersessel","Chair, Recliner, Armchair",80,100,100,1,0,0,"5,2","0,80","0,80",1,"5,2",0,0,,0,0,0
+Furniture,Other,Sitzsack,Bean Bag,100,100,70,1,0,0,"4,8","0,70","0,70",1,"4,8",0,0,,0,0,0
+Furniture,Other,"Skulptur, Statue (<1,20m)","Sculpture, Statue (<1.20m)",50,50,160,1,0,0,"3,7","0,40","0,40",1,"3,7",0,0,,0,0,0
+Furniture,Other,"Skulptur, Statue (>1,20m)","Sculpture, Statue (>1.20m)",50,50,80,1,0,0,"2,1","0,20","0,20",1,"2,1",0,0,,0,0,0
+Furniture,Other,"Teppich (<2,50m)","Carpet, Rug, Pad (<2.50m)",150,150,5,1,0,0,"4,8","0,11","0,11",1,"4,8",0,0,,0,0,0
+Furniture,Other,"Teppich (>2,50m)","Carpet, Rug, Pad (>2.50m)",300,300,5,1,0,0,"18,6","0,45","0,45",1,"18,6",0,0,,0,0,0
+Furniture,Other,Truhe,Chest,40,100,50,"0,5",20,40,"2,2","0,20","0,10",1,"2,2",0,0,,0,0,0
+Furniture,Other,Vase,Vase,20,20,40,1,0,0,"0,4","0,02","0,02",1,"0,4",0,0,,0,0,0
+Furniture,Other,"Wascheständer, Wäschetrockner",Clothes Drying Rack,60,100,10,1,0,0,"1,52","0,06","0,06",1,"1,52",0,0,,0,0,0
+Furniture,Other,Wiege,Cradle / Crib / Cot (Small),60,120,80,1,0,0,"4,32","0,58","0,58",1,"4,32",0,0,,0,0,0
+Furniture,Picture/Mirror,"Bild (<0,60m)",Picture (<0.60m),40,30,5,1,0,0,"0,31","0,01","0,01",1,"0,31",0,1,,0,0,0
+Furniture,Picture/Mirror,"Bild (>0,60m)",Picture (>0.60m),80,60,5,1,0,0,"1,1","0,02","0,02",1,"1,1",0,1,,0,0,0
+Furniture,Picture/Mirror,"Bild, Gemälde (<0,80m)",Painting / Picture (<0.80m),60,40,5,1,0,0,"0,58","0,01","0,01",1,"0,58",0,1,,0,0,0
+Furniture,Picture/Mirror,"Bild, Gemälde (>0,80m)",Painting / Picture (>0.80m),120,60,5,1,0,0,"1,62","0,04","0,04",1,"1,62",0,1,,0,0,0
+Furniture,Picture/Mirror,"Spiegel (<1,00m)",Mirror (<1.00m),5,40,60,1,0,0,"0,58","0,01","0,01",1,"0,58",0,0,,0,0,0
+Furniture,Picture/Mirror,"Spiegel (>1,00m)",Mirror (>1.00m),5,80,140,1,0,0,"2,46","0,06","0,06",1,"2,46",0,0,,0,0,0
+Furniture,Refrigeration,"Gefrierschrank / Gefriertruhe (1,20m)",Chest Freezer (1.20m),120,60,60,1,0,0,"3,6","0,43","0,43",1,"3,6",0,0,,0,0,0
+Furniture,Refrigeration,"Gefrierschrank / Gefriertruhe (1,80m)",Chest Freezer (1.80m),180,60,60,1,0,0,"5,04","0,65","0,65",1,"5,04",0,0,,0,0,0
+Furniture,Refrigeration,Kühlschrank / Gefrierkombination (<120L Inhalt),Refrigerator (<120L),75,70,130,1,0,0,"4,82","0,68","0,68",1,"4,82",0,0,,0,0,0
+Furniture,Refrigeration,Kühlschrank / Gefrierkombination (>120L Inhalt),Refrigerator (>120L),75,120,180,1,0,0,"8,82","1,62","1,62",1,"8,82",0,0,,0,0,0
+Furniture,Safe,Safe,Safe,50,50,80,1,0,0,"2,1","0,20","0,20",1,"2,1",0,0,,0,0,0
+Furniture,Shelves,"Regal, Bücherregal (<1,00m)","Shelf, Bookshelf / Bookcase (<1.00m)",40,90,180,"0,5",10,20,"5,4","0,65","0,32",1,"5,4",0,0,,0,0,0
+Furniture,Shelves,"Regal, Bücherregal (>1,00m)","Shelf, Bookshelf / Bookcase (>1.00m)",40,180,200,"0,5",20,40,"10,24","1,44","0,72",1,"10,24",0,0,,0,0,0
+Furniture,Shelves,"Regal, Ikea, Billy","Shelf, Ikea, Billy",30,90,200,"0,5",10,20,"5,34","0,54","0,27",1,"5,34",0,0,,0,0,0
+Furniture,Shelves,"Regal, Ikea, Expedit / Kallax, 2x4 Fächer","Shelf, Ikea, Expedit / Kalla, 2x4 Cases",40,80,150,"0,5",10,20,"4,24","0,48","0,24",1,"4,24",0,0,,0,0,0
+Furniture,Table,"Tisch (<1,00m)",Table (<1.00m),100,100,90,"0,5",10,20,"5,6","0,90","0,45",1,"5,6",0,0,,0,0,0
+Furniture,Table,"Tisch (>1,00m)",Table (>1.00m),180,100,90,"0,5",20,40,"8,64","1,62","0,81",1,"8,64",0,0,,0,0,0
+Furniture,Table,"Tisch, Beistelltisch",Side Table,40,40,50,"0,5",5,10,"1,12","0,08","0,04",1,"1,12",0,0,,0,0,0
+Furniture,Other,"Tisch, Billard",Pool / Snooker Table,240,130,90,"0,5",40,80,"12,9","2,81","1,40",1,"12,9",0,0,,0,0,0
+Furniture,Table,"Tisch, Couchtisch, Sofatisch","Table, Couch",90,90,70,"0,5",15,30,"4,14","0,57","0,28",1,"4,14",0,0,,0,0,0
+Furniture,Table,"Tisch, Küchen- / Esstisch (<1,00m)",Dining Table (<1.00m),100,100,90,"0,5",10,20,"5,6","0,90","0,45",1,"5,6",0,0,,0,0,0
+Furniture,Table,"Tisch, Küchen- / Esstisch (>1,00m)",Dining Table (>1.00m),180,100,90,"0,5",20,40,"8,64","1,62","0,81",1,"8,64",0,0,,0,0,0
+Furniture,Table,"Tisch, Gartentisch, Terassentisch",Garden / Patio Table,120,70,80,"0,5",15,30,"4,72","0,67","0,34",1,"4,72",0,0,,0,0,0
+Furniture,Table,"Tisch, Kindertisch, mit Stühlen",Child Table + Chairs,50,80,60,"0,5",5,10,"2,36","0,24","0,12",1,"2,36",0,0,,0,0,0
+Furniture,Table,"Tisch, Schmink- / Kosmetiktisch (<1,50m)",Vanity / Dressing Table (<1.50m),50,200,90,"0,5",10,20,"6,5","0,90","0,45",1,"6,5",0,0,,0,0,0
+Furniture,Table,"Tisch, Schminck- / Kosmetiktisch (>1,50m)",Vanity / Dressing Table (>1.50m),50,150,90,"0,5",10,20,"5,1","0,68","0,34",1,"5,1",0,0,,0,0,0
+Furniture,Table,"Tisch, Nachttisch",Bedside Table,45,45,60,"0,5",5,10,"1,485","0,12","0,06",1,"1,485",0,0,,0,0,0
+Furniture,Table,"Tisch, Schreibtisch, Eckform","Desk, Executive",180,180,90,"0,5",15,30,"12,96","2,92","1,46",1,"12,96",0,0,,0,0,0
+Furniture,Table,"Tisch, Schreibtisch","Desk, Double",180,100,90,"0,5",10,20,"8,64","1,62","0,81",1,"8,64",0,0,,0,0,0
+Furniture,Table,"Tisch, TV-Tisch, Fernsehertisch",TV-Table,40,120,45,"0,5",5,10,"2,4","0,22","0,11",1,"2,4",0,0,,0,0,0
+Furniture,Table,"Tisch, Wickeltisch",Baby Changing Table,50,120,100,"0,5",5,10,"4,6","0,60","0,30",1,"4,6",0,0,,0,0,0
+Furniture,Tools,Bohrmaschine,Power Tool,30,10,25,1,0,0,"0,26","0,01","0,01",1,"0,26",0,0,,0,0,0
+Furniture,Tools,Heckenschneider,Edger,20,80,20,1,0,0,"0,72","0,03","0,03",1,"0,72",0,0,,0,0,0
+Furniture,Tools,Hochdruckreiniger,High Pressure Washer / Power Jet,30,30,100,1,0,0,"1,38","0,09","0,09",1,"1,38",0,0,,0,0,0
+Furniture,Tools,Kettensäge,Chain saw,20,40,60,1,0,0,"0,88","0,05","0,05",1,"0,88",0,0,,0,0,0
+Furniture,Tools,Kreissäge,Table Saw,40,20,30,1,0,0,"0,52","0,02","0,02",1,"0,52",0,0,,0,0,0
+Furniture,Tools,Rasenmäher,Lawn Mower,80,50,50,1,0,0,"2,1","0,20","0,20",1,"2,1",0,0,,0,0,0
+Furniture,Tools,"Rasenmäher, Sitzrasenmäher",Riding Lawn Mower,140,70,100,1,0,0,"6,16","0,98","0,98",1,"6,16",0,0,,0,0,0
+Furniture,Tools,Saw,Saw,5,60,10,1,0,0,"0,19","0,00","0,00",1,"0,19",0,0,,0,0,0
+Furniture,Tools,Schneefräse,Snowblower,100,50,100,1,0,0,4,"0,50","0,50",1,4,0,0,,0,0,0
+Furniture,Tools,Streugerät,Spreader,120,120,120,1,0,0,"8,64","1,73","1,73",1,"8,64",0,0,,0,0,0
+Furniture,Garden/Outdoor,"Werkbank (<1,50m)",Workbench (<1.50m),90,100,70,"0,5",10,20,"4,46","0,63","0,32",1,"4,46",0,0,,0,0,0
+Furniture,Garden/Outdoor,"Werkbank (>1,50m)",Workbench (>1.50m),90,200,70,"0,5",15,30,"7,66","1,26","0,63",1,"7,66",0,0,,0,0,0
+Furniture,Tools,Werkzeugkasten,Toolbox,30,40,40,1,0,0,"0,8","0,05","0,05",1,"0,8",0,0,,0,0,0
+Furniture,Other,Korb,Waste Basket,40,40,50,1,0,0,"1,12","0,08","0,08",1,"1,12",0,0,,0,0,0
+Furniture,Trash,"Papierkorb, Müll-, Abfalleimer",Trunk (Large),50,40,100,1,0,0,"2,2","0,20","0,20",1,"2,2",0,0,,0,0,0
+Furniture,Wardrobe,Kleiderschrank (lfd. Meter),"Wardrobe, per meter",60,100,180,"0,5",10,30,"6,96","1,08","0,54",1,"6,96",0,0,,0,0,0
+Furniture,Wardrobe,"Kleiderschrank, mit Schwebetüren (lfd. Meter)","Wardrobe, Sliders, per meter",60,100,180,"0,5",20,40,"6,96","1,08","0,54",1,"6,96",0,0,,0,0,0
+Furniture,Wardrobe,"Kleiderschrank, mit Spiegel (lfd. Meter)","Wardrobe, Mirror, peter meter",60,100,180,"0,5",20,40,"6,96","1,08","0,54",1,"6,96",0,0,,0,0,0
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,0,0,0
+,,,,,,,,,,,,,,,,,,0,,

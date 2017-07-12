@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=1400, user-scalable=yes, initial-scale=3.0, maximum-scale=5.0, minimum-scale=0.1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Relocately IOI</title>
+  <style type="text/css">
+
+    html, body {
+      margin: 0;
+      border: 0;
+      padding: 0;
+      font-family: Arial;
+      height:0px;
+      background-color: white;
+      /*zoom:80%;*/
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+      transform: scale(0.8215);
+      -webkit-transform: scale(0.8215);
+      /*-webkit-transform: scale(0.8215);*/
+    }
+
+    body {
+      width:880px;
+      padding-top: 50px;
+      padding-right: 50px;
+      padding-left: 50px;
+      /*border:1px solid blue;*/
+      overflow: hidden;
+      /*background-color: red;*/
+
+    }
+    * {
+      box-sizing: border-box;
+    }
+    .bold {
+      font-weight: 700;
+    }
+    img.logo {
+      max-height: 70px;
+      width:200px;;
+    }
+    .concierge-details {
+      width: 50%;
+      font-size: 10pt;
+    }
+    .concierge-details div {
+      text-align: right;
+    }
+    .inventory-header {
+      font-weight: 700;
+      font-size: 14pt;
+      margin-bottom: 20px;
+      margin-top: 85px;
+    }
+    .inventory-subtitle {
+      font-size: 9pt;
+      width:450px;
+    }
+    .page-container {
+      width: 100%;
+    }
+    #pageFooter p {
+      margin: 0;
+      font-size: 10px;
+      text-align: center;
+    }
+    .ninety-degrees {
+      /*-webkit-transform-origin: 50% 50%;
+      transform: rotate(-90deg);*/
+      /*-webkit-transform: rotate(-90deg) translateX(0%) translateY(0%);*/
+      /*-moz-transform: rotate(-90deg) translateX(50%) translateY(-50%);*/
+      /*-o-transform: rotate(-90deg) translateX(50%) translateY(-50%);*/
+      /*-ms-transform: rotate(-90deg) translateX(50%) translateY(-50%);*/
+      /*transform: rotate(-90deg) translateX(0%) translateY(0%);*/
+      /*width: 100px;*/
+      /*position: absolute;*/
+      /*bottom: 36px;*/
+      /*left: -26px;*/
+      letter-spacing: 1px;
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+
+      font-weight: lighter;
+      font-size: 10pt;
+      margin-left: -20px;
+      width:105px;
+      height:50px;
+      padding-left:10px;
+    }
+    .spacer {
+      padding-top: 80px;
+    }
+    .title {
+      color: #F8AA33;
+      font-weight: 700;
+      margin: 0;
+      font-size: 9pt;
+    }
+    .subtitle {
+      color: #B2A6A6;
+      font-size: 7pt;
+      line-height:10pt;
+      font-weight: bold;
+      margin: 0;
+    }
+    .ten-percent {
+      width: 50px;
+    }
+    .five-percent {
+      max-width: 50px;
+      width:50px;
+      padding: 0;
+
+    }
+
+    #pageFooter {
+      margin-top:-30px;
+      padding-top:12px;
+      height:80px;
+      /*text-align: center;*/
+      background-color:#efefef;
+    }
+    #pageFooter p span{
+      display: block;
+      /*border:1px solid red;*/
+      float: left;
+      clear: left;
+      text-align: left;
+      font-size: 10px;
+      padding:0px;
+      margin:0px;
+      /*vertical-align: middle;*/
+      /*height:20px;*/
+      color: #333;
+    }
+    #pageFooter p{
+      display: block;
+      height:50px;
+      border-right:1px solid #BFBFBF;
+      padding-left:20px;
+      padding-top: 0px;
+      width:250px;
+      float: left;
+      line-height:15px;
+    }
+    .border-left {
+      border-left: solid 1px #BFBFBF;
+    }
+    .border-right {
+      border-right: solid 1px #BFBFBF;
+    }
+
+    .rotated-border-left {
+      border-top: solid 2px #BFBFBF;
+    }
+    .rotated-border-right {
+      border-bottom: solid 2px #BFBFBF;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top:80px;
+    }
+    table td, table th {
+      padding: 10px 5px ;
+      font-size:6pt;
+
+      position:relative;
+    }
+    table th {
+      height: 60px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    table th.five-percent {
+      vertical-align: middle;
+    }
+    .item {
+      color: #212845;
+      font-weight:700;
+      font-size: 9pt;
+    }
+    tbody tr.room {
+      background-color:#F0F0EF;
+    }
+    tbody tr {
+      border-top: solid 1px #BFBFBF;
+      color:#212845;
+    }
+    tbody tr td {
+      /*height:50px;*/
+      padding:10px;
+    }
+
+    tbody td .detail {
+      color:#ABA7C3;
+      font-weight: normal;
+    }
+
+    tbody td .detail-dark {
+      color:#7F7F9D;
+      font-weight: bold;
+    }
+    tbody td .orange {
+      color:#F8AA33;
+    }
+    img.check {
+      max-height:30px;
+      height:18px;
+      padding-left: 3px;
+      /*border:1px solid red;*/
+    }
+    tbody tr.total {
+      background-color:#FBFBFB;
+      border-bottom: solid 1px #000;
+    }
+
+    .legend-container {
+      /*padding:30px;*/
+      /*width:100%;*/
+      margin-top:100px;
+      float: right;
+      width: 200px;
+    }
+
+    ul.legend {
+      float:right;
+      padding:0;
+      margin: 0;
+      list-style-type: none;
+      font-size:12pt;
+      width:250px;
+    }
+    ul.legend li {
+      float:left;
+      margin-bottom:10px;
+      width:100%;
+    }
+    ul.legend li img {
+      display: block;
+      float:left;
+    }
+
+    ul.legend li span {
+      display: block;
+      float:left;
+      margin-left:5px;
+      line-height:20px;
+    }
+
+    .clear {
+      clear:both;
+    }
+    .dbg{
+      border:1px solid red;
+    }
+
+  </style>
+</head>
+<body >
+
+<!--total A4 595px-->
+<!--<div style="background-color: red; display: block;float: none;width:830px;">830</div>-->
+<!--<div style="background-color: red; display: block;float: none;width:1135px;">1135</div>-->
+
+<div style="width:200px;float:left"><img src="{{=it.assetPath}}/img/logo.png" class="logo"></div>
+<div style="width:200px;float:right" class="concierge-details">
+  {{? it.concierge }}
+  <div class="bold">Your Relocation Concierge</div>
+  <div>{{=it.concierge}}</div>
+  {{?}}
+  <div class="bold">Reference number</div>
+  <div>{{=it.reference_number}}</div>
+  <div class="bold">Date</div>
+  <div>{{=it.date}}</div>
+</div>
+
+<div class="clear"></div>
+<div class="legend-container  " >
+  <ul class="legend">
+    <li><img src="{{=it.assetPath}}/img/check_yes.png" class="check" > <span>service rendered by Relocately</span></li>
+    <li><img src="{{=it.assetPath}}/img/check_partial.png" class="check" > <span>service rendered by Customer</span></li>
+    <li><img src="{{=it.assetPath}}/img/check_no.png" class="check" > <span>service not rendered</span></li>
+  </ul>
+</div>
+
+<h1 class="inventory-header">Inventory of items</h1>
+<p class="inventory-subtitle">Please check that all items which you would like to move are listed below and all desired services are checked</p>
+
+<table class="page-container" >
+  <thead style="border-collapse: separate;display: table-row-group;">
+  <tr class="header" style="border-collapse: separate;">
+    <th style="width: 150px;min-width: 150px;padding-top: 50px;  " rowspan="2">
+      <p class="title">Name</p>
+      <!--<p class="subtitle">&nbsp;</p>-->
+      <!--<p class="subtitle">Dimension (cm)</p>-->
+    </th>
+    <th style="min-width: 120px;padding-top: 50px;border-collapse: separate"  rowspan="2">
+      <p class="title">Description</p>
+    </th>
+    <th class="ten-percent" style="min-width: 90px;padding-top: 50px;"  rowspan="2">
+      <p class="title">Quantity</p>
+      <!--<p class="subtitle">&nbsp;</p>-->
+      <!--<p class="subtitle">Number of items</p>-->
+    </th>
+    <th class="ten-percent" style="text-align: left" colspan="2">
+      <p class="title" style="padding-top: 40px;">Volume</p>
+      <!--<p class="subtitle">&nbsp;</p>-->
+      <!--<p class="subtitle">Weight</p>-->
+    </th>
+    <th rowspan="2" class="five-percent" style="border-left: solid 2px #BFBFBF;">
+      <!--<div class="vertical-text dismantling"></div>-->
+      <div class="ninety-degrees  rotated-border-right " style="padding-top: 15px; margin-bottom: -25px;margin-top: -25px; ">Dismantling</div>
+    </th>
+    <th rowspan="2" class="five-percent" style="border-left: solid 2px #BFBFBF;">
+      <!--<div class="vertical-text packing"></div>-->
+      <div class="ninety-degrees rotated-border-right"  style="padding-top: 7px;margin-bottom: -22px;margin-top: -25px; ">Packing&nbsp;& wrapping</div>
+    </th>
+    <th rowspan="2" class="five-percent" style="border-left: solid 2px #BFBFBF;">
+      <!--<div class="vertical-text unpacking"></div>-->
+      <div class="ninety-degrees rotated-border-right" style="padding-top: 7px;margin-bottom: -22px;margin-top: -25px; ">Unpacking&nbsp;& unwrapping</div>
+    </th>
+    <th rowspan="2" class="five-percent" style="border-left: solid 2px #BFBFBF;">
+      <!--<div class="vertical-text assembly"></div>-->
+      <div class="ninety-degrees rotated-border-right" style="padding-top: 15px;margin-bottom: -22px;margin-top: -25px; ">Assembly</div>
+    </th>
+    <th rowspan="2" class="five-percent" style="border-left: solid 2px #BFBFBF;border-right: solid 2px #BFBFBF;margin-bottom: -22px;margin-top: -25px; ">
+      <!--<div class="vertical-text crate"></div>-->
+      <div class="ninety-degrees " style="padding-top: 15px;">Crate&nbsp;required</div>
+    </th>
+  </tr>
+  <tr class="second-row">
+    <td class="ten-percent"  style="min-width: 60px;">
+      <p class="subtitle">Per Item</p>
+    </td>
+    <td class="ten-percent"  style="min-width: 105px;">
+      <p class="subtitle">Total </p>
+    </td>
+
+  </tr>
+  </thead>
+  <tbody style ="border-collapse: collapse;">
+  <!--foreach room-->
+  {{~it.rooms :room}}
+  <tr class="room">
+    <td class="item" colspan="10" style="font-size: 18px;">{{=room.name.en}}</td>
+  </tr>
+
+  <!--foreach item-->
+  {{~room.items :item}}
+  <tr style="page-break-before:always;page-break-inside: avoid; ">
+    <td style="page-break-before:always;page-break-inside: avoid;">
+      <span class="item" >{{=item.name.en || item.name.de}}</span><br />
+      <span class="detail">{{=item.detail}}cm</span>
+    </td>
+    <td style="font-size: 10px;">
+      {{=item.description}}
+    </td >
+    <td style="font-size: 12px;">
+      {{=item.amount}}</td>
+    <td style="vertical-align: top;">
+      <span class="detail-dark" style="font-size: 10px;">{{=item.volume}} m<sup>3</sup></span><br />
+      <span class="detail" style="font-size: 10px;">{{=item.weight}} kg</span>
+    </td>
+    <td style="vertical-align: top;">
+      <span style="font-size: 10px;">{{=item.total_volume}} m<sup>3
+        {{? item.dismantling !== 1}}
+          <br><span class="orange" style="color: #F8AA33;">when dismantled</span>
+        {{?}}
+      </sup> </span><br />
+              <span class="detail" style="font-size: 10px;">{{=item.total_weight}} kg
+                {{? item.one_man_handling === 1}}
+                <br>
+                    1 Person Handling
+                {{?}}
+                </span>
+    </td>
+    <td class="border-left border-right">
+
+      {{? item.dismantling === 1}}
+      <img src="{{=it.assetPath}}/img/check_no.png" class="check" >
+      {{?? item.dismantling === 2 }}
+      <img src="{{=it.assetPath}}/img/check_yes.png" class="check" >
+      {{?? item.dismantling === 3 }}
+      <img src="{{=it.assetPath}}/img/check_partial.png" class="check" >
+      {{?}}
+
+    </td>
+    <td class="border-right">
+
+      {{? item.packed_by === 1}}
+      <img src="{{=it.assetPath}}/img/check_no.png" class="check" >
+      {{?? item.packed_by === 2}}
+      <img src="{{=it.assetPath}}/img/check_yes.png" class="check" >
+      {{?? item.packed_by === 3}}
+      <img src="{{=it.assetPath}}/img/check_partial.png" class="check" >
+      {{?}}
+
+    </td>
+    <td class="border-right">
+      {{? item.unpacking === 1}}
+      <img src="{{=it.assetPath}}/img/check_no.png" class="check" >
+      {{?? item.unpacking === 2}}
+      <img src="{{=it.assetPath}}/img/check_yes.png" class="check" >
+      {{?? item.unpacking === 3}}
+      <img src="{{=it.assetPath}}/img/check_partial.png" class="check" >
+      {{?}}
+    </td>
+
+    <td class="border-right">
+      {{? item.assembling === 1}}
+      <img src="{{=it.assetPath}}/img/check_no.png" class="check" >
+      {{??  item.assembling === 2}}
+      <img src="{{=it.assetPath}}/img/check_yes.png" class="check" >
+      {{??  item.assembling === 3}}
+      <img src="{{=it.assetPath}}/img/check_partial.png" class="check" >
+      {{?}}
+
+      <!--<img src="{{=it.assetPath}}/img/check_partial.png" class="check" >-->
+    </td>
+    <td class="border-right">
+      {{? item.crate === 1}}
+      <img src="{{=it.assetPath}}/img/check_no.png" class="check" >
+      {{?? item.crate=== 2}}
+      <img src="{{=it.assetPath}}/img/check_yes.png" class="check" >
+      {{?? item.crate=== 3}}
+      <img src="{{=it.assetPath}}/img/check_partial.png" class="check" >
+      {{?}}
+
+    </td>
+  </tr>
+  {{~}}
+  {{~}}
+
+  <tr class="total" style="background-color: #eee;padding-bottom: 10px">
+    <td colspan="2" style="font-size: 20px;font-weight: bold;">Total</td>
+    <td style="font-size: 12px;">{{=it.total.amount}}</td>
+    <td>&nbsp;</td>
+    <td>
+      <span style="font-size: 12px;">{{=it.total.volume_gross}} m<sup>3</sup> (including 20% loss of stowage)</span><br />
+      <span class="detail" style="font-size: 12px;">{{=it.total.weight}} kg</span>
+    </td>
+    <td colspan="6">&nbsp;</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+
+
+
+<div class="clear"></div>
+
+<div id="pageFooter">
+  <p style="width: 270px;">
+    <span><b>Relocately UG (haftungsbeschränkt)</b></span> <br>
+    <span>Greifswalder Straße 207, 10405 Berlin, Germany</span><br>
+    <span style="margin-top: 0px;"><b>Managing Directors:</b> Julian Treidler, Lennart Will</span>
+
+  </p>
+  <p style="width: 280px;">
+    <span><b>Legal Information</b></span>
+    <span> Amtsgericht Berlin-Charlottenburg - HRB181457 </span>
+    <span style="margin-bottom: 10px"><b>Tax-ID:</b> DE296834593 - <b>Tax-No:</b> 41/740/03713</span>
+  </p>
+
+  <p style="border: none;width: 200px;">
+    <span><b>Fidor Bank AG</b></span>
+    <span><b>IBAN:</b> DE78200222000020040300</span>
+    <span><b>BIC:</b> FDDODEMMXXX</span>
+  </p>
+</div>
+
+</html>

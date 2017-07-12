@@ -1,0 +1,5 @@
+POSTGRES_HOST=relocately.apps.cioan.ca
+POSTGRES_DB_NAME=relocately_db
+POSTGRES_USER=relocately_db_user
+POSTGRES_PASSWORD=F2YwVCDXs8jK6fDh
+PORT=3000

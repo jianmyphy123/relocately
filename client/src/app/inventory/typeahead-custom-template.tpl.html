@@ -1,0 +1,6 @@
+<ul class="dropdown-menu" ng-show="isOpen() && !moveInProgress" ng-style="{top: position().top+'px', left: position().left+'px'}" role="listbox" aria-hidden="{{!isOpen()}}">
+  <li class="uib-typeahead-match" ng-repeat="match in matches track by $index" ng-if="$index < 20" ng-class="{active: isActive($index) }" ng-mouseenter="selectActive($index)" ng-click="selectMatch($index, $event)" role="option" id="{{::match.id}}">
+    <div uib-typeahead-match index="$index" match="match" query="query" template-url="templateUrl"></div>
+  </li>
+  <li class="item-count"><span>Total: {{matches.length}}</span></li>
+</ul>
